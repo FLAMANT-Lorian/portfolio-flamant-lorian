@@ -5,6 +5,10 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
+
+// Include ACF Fields
+include_once('fields.php');
+
 // Disable Gutenberg Editor
 
 add_filter('use_block_editor_for_post', '__return_false');
