@@ -10,10 +10,16 @@
     <?php wp_head(); ?>
 </head>
 
-<body>
 <header>
     <nav>
-
+        <h2 class=""><?= 'Navigation principale'; ?></h2>
+        <ul class="nav__container">
+            <?php foreach (dw_get_navigation_links('header') as $link): ?>
+                <li class="nav__item">
+                    <a href="<?= $link->href; ?>" class="nav__links"><?= $link->label; ?></a>
+                </li>
+            <?php endforeach; ?>
+        </ul>
     </nav>
 </header>
 <main>
