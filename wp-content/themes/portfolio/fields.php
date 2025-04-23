@@ -1,5 +1,4 @@
 <?php
-
 add_action( 'acf/include_fields', function() {
     if ( ! function_exists( 'acf_add_local_field_group' ) ) {
         return;
@@ -695,27 +694,6 @@ add_action( 'acf/include_fields', function() {
                         'return_format' => 'array',
                         'allow_in_bindings' => 0,
                     ),
-                    array(
-                        'key' => 'field_680684861da18',
-                        'label' => 'Lien bas de la page',
-                        'name' => 'low-link',
-                        'aria-label' => '',
-                        'type' => 'text',
-                        'instructions' => '',
-                        'required' => 1,
-                        'conditional_logic' => 0,
-                        'wrapper' => array(
-                            'width' => '',
-                            'class' => '',
-                            'id' => '',
-                        ),
-                        'default_value' => '',
-                        'maxlength' => '',
-                        'allow_in_bindings' => 0,
-                        'placeholder' => '',
-                        'prepend' => '',
-                        'append' => '',
-                    ),
                 ),
             ),
             array(
@@ -827,6 +805,33 @@ add_action( 'acf/include_fields', function() {
                                 'allow_null' => 0,
                                 'allow_in_bindings' => 0,
                                 'layout' => 'horizontal',
+                            ),
+                        ),
+                        'min' => '',
+                        'max' => '',
+                    ),
+                    'layout_6809251fffe3b' => array(
+                        'key' => 'layout_6809251fffe3b',
+                        'name' => 'link',
+                        'label' => 'Link',
+                        'display' => 'block',
+                        'sub_fields' => array(
+                            array(
+                                'key' => 'field_6809252cffe3d',
+                                'label' => 'Lien bas de page',
+                                'name' => 'low_link',
+                                'aria-label' => '',
+                                'type' => 'link',
+                                'instructions' => '',
+                                'required' => 0,
+                                'conditional_logic' => 0,
+                                'wrapper' => array(
+                                    'width' => '',
+                                    'class' => '',
+                                    'id' => '',
+                                ),
+                                'return_format' => 'array',
+                                'allow_in_bindings' => 0,
                             ),
                         ),
                         'min' => '',
@@ -1298,5 +1303,4 @@ add_action( 'acf/include_fields', function() {
         'show_in_rest' => 0,
     ) );
 } );
-
 
