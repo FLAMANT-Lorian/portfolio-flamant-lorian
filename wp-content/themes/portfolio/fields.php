@@ -654,7 +654,7 @@ add_action( 'acf/include_fields', function() {
                     array(
                         'key' => 'field_6806768d5c677',
                         'label' => 'Photo de profil',
-                        'name' => 'profile_picture',
+                        'name' => 'profile-picture',
                         'aria-label' => '',
                         'type' => 'image',
                         'instructions' => '',
