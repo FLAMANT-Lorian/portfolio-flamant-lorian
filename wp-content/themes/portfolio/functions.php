@@ -125,3 +125,26 @@ function handle_contact_form()
 
     return ContactForm::handle($_REQUEST);
 }
+
+// Add site option page
+
+function create_site_options_page()
+{
+    if (function_exists('acf_add_options_page')) {
+        acf_add_options_page([
+            'page_title' => 'Site Options',
+            'menu_title' => 'Site Settings',
+            'menu_slug' => 'site-options',
+            'capability' => 'edit_posts',
+            'redirect' => false
+        ]);
+
+        acf_add_options_sub_page([
+            'page_title' => 'SEO Settings',
+            'menu_title' => 'SEO',
+            'parent_slug' => 'site-options',
+        ]);
+    }
+}
+
+add_action('acf/init', 'create_site_options_page');
