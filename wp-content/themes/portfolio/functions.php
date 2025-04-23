@@ -19,6 +19,19 @@ add_action('wp_enqueue_scripts', function () {
     wp_dequeue_style('global-styles');
 }, 20);
 
+// Register a new taxonomy for filter projects
+
+register_taxonomy('Projects', ['project'], [
+    'labels' => [
+        'name' => 'Types de projet',
+        'singular_name' => 'Types de projet'
+    ],
+    'description' => 'De quel type le projet appartient-il ? ',
+    'public' => true,
+    'show_tagcloud' => false,
+    'hierarchical' => true
+]);
+
 
 // Add Custom Post Type for Projects and contact
 add_theme_support('post-thumbnails', ['project']);
