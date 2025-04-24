@@ -1291,8 +1291,7 @@ add_action( 'acf/include_fields', function() {
         'location' => array(
             array(
                 array(
-                    'param' => 'options_pag
-                    e',
+                    'param' => 'options_page',
                     'operator' => '==',
                     'value' => 'site-options',
                 ),
