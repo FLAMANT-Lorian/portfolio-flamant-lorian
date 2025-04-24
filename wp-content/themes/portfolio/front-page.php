@@ -1,19 +1,7 @@
 <?php get_header();
 if (have_posts()): while (have_posts()): the_post(); ?>
 
-    <section>
-        <h2><?= __trans(get_field('main-title')); ?></h2>
-        <div>
-            <h3><?= get_field('job-title'); ?></h3>
-            <p><?= get_field('job-description'); ?></p>
-        </div>
-        <figure>
-            <img src="" alt="">
-        </figure>
-        <a href="<?= get_field('high-link')['url']; ?>" title="Aller sur la page : À propos">
-            <?= get_field('high-link')['title']; ?>
-        </a>
-    </section>
+    <?php include('template/partials/home/stage.php'); ?>
 
     <section>
         <h2 class="sro">Mes derniers projets</h2>
