@@ -49,7 +49,7 @@ add_action( 'acf/include_fields', function() {
                         'aria-label' => '',
                         'type' => 'text',
                         'instructions' => '',
-                        'required' => 1,
+                        'required' => 0,
                         'conditional_logic' => 0,
                         'wrapper' => array(
                             'width' => '',
@@ -254,7 +254,7 @@ add_action( 'acf/include_fields', function() {
                                 'aria-label' => '',
                                 'type' => 'wysiwyg',
                                 'instructions' => '',
-                                'required' => 1,
+                                'required' => 0,
                                 'conditional_logic' => 0,
                                 'wrapper' => array(
                                     'width' => '',
@@ -275,7 +275,7 @@ add_action( 'acf/include_fields', function() {
                                 'aria-label' => '',
                                 'type' => 'image',
                                 'instructions' => '',
-                                'required' => 1,
+                                'required' => 0,
                                 'conditional_logic' => 0,
                                 'wrapper' => array(
                                     'width' => '',
@@ -335,7 +335,7 @@ add_action( 'acf/include_fields', function() {
                                 'aria-label' => '',
                                 'type' => 'text',
                                 'instructions' => '',
-                                'required' => 1,
+                                'required' => 0,
                                 'conditional_logic' => 0,
                                 'wrapper' => array(
                                     'width' => '',
@@ -356,7 +356,7 @@ add_action( 'acf/include_fields', function() {
                                 'aria-label' => '',
                                 'type' => 'wysiwyg',
                                 'instructions' => '',
-                                'required' => 1,
+                                'required' => 0,
                                 'conditional_logic' => 0,
                                 'wrapper' => array(
                                     'width' => '',
@@ -377,7 +377,7 @@ add_action( 'acf/include_fields', function() {
                                 'aria-label' => '',
                                 'type' => 'link',
                                 'instructions' => '',
-                                'required' => 1,
+                                'required' => 0,
                                 'conditional_logic' => 0,
                                 'wrapper' => array(
                                     'width' => '',
@@ -476,7 +476,7 @@ add_action( 'acf/include_fields', function() {
                                 'aria-label' => '',
                                 'type' => 'text',
                                 'instructions' => '',
-                                'required' => 1,
+                                'required' => 0,
                                 'conditional_logic' => 0,
                                 'wrapper' => array(
                                     'width' => '',
@@ -497,7 +497,7 @@ add_action( 'acf/include_fields', function() {
                                 'aria-label' => '',
                                 'type' => 'gallery',
                                 'instructions' => '',
-                                'required' => 1,
+                                'required' => 0,
                                 'conditional_logic' => 0,
                                 'wrapper' => array(
                                     'width' => '',
@@ -561,7 +561,7 @@ add_action( 'acf/include_fields', function() {
                 'aria-label' => '',
                 'type' => 'text',
                 'instructions' => '',
-                'required' => 1,
+                'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => array(
                     'width' => '',
@@ -582,7 +582,7 @@ add_action( 'acf/include_fields', function() {
                 'aria-label' => '',
                 'type' => 'text',
                 'instructions' => '',
-                'required' => 1,
+                'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => array(
                     'width' => '',
@@ -624,7 +624,7 @@ add_action( 'acf/include_fields', function() {
                 'aria-label' => '',
                 'type' => 'image',
                 'instructions' => '',
-                'required' => 1,
+                'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => array(
                     'width' => '',
@@ -650,7 +650,7 @@ add_action( 'acf/include_fields', function() {
                 'aria-label' => '',
                 'type' => 'link',
                 'instructions' => '',
-                'required' => 1,
+                'required' => 0,
                 'conditional_logic' => 0,
                 'wrapper' => array(
                     'width' => '',
@@ -761,7 +761,9 @@ add_action( 'acf/include_fields', function() {
         'style' => 'default',
         'label_placement' => 'top',
         'instruction_placement' => 'label',
-        'hide_on_screen' => '',
+        'hide_on_screen' => array(
+            0 => 'the_content',
+        ),
         'active' => true,
         'description' => '',
         'show_in_rest' => 0,
@@ -812,7 +814,7 @@ add_action( 'acf/include_fields', function() {
                         'aria-label' => '',
                         'type' => 'text',
                         'instructions' => '',
-                        'required' => 1,
+                        'required' => 0,
                         'conditional_logic' => 0,
                         'wrapper' => array(
                             'width' => '',
@@ -833,7 +835,7 @@ add_action( 'acf/include_fields', function() {
                         'aria-label' => '',
                         'type' => 'wysiwyg',
                         'instructions' => '',
-                        'required' => 1,
+                        'required' => 0,
                         'conditional_logic' => 0,
                         'wrapper' => array(
                             'width' => '',
@@ -895,7 +897,7 @@ add_action( 'acf/include_fields', function() {
                                 'aria-label' => '',
                                 'type' => 'text',
                                 'instructions' => '',
-                                'required' => 1,
+                                'required' => 0,
                                 'conditional_logic' => 0,
                                 'wrapper' => array(
                                     'width' => '',
@@ -916,7 +918,7 @@ add_action( 'acf/include_fields', function() {
                                 'aria-label' => '',
                                 'type' => 'image',
                                 'instructions' => '',
-                                'required' => 1,
+                                'required' => 0,
                                 'conditional_logic' => 0,
                                 'wrapper' => array(
                                     'width' => '',
@@ -1012,7 +1014,7 @@ add_action( 'acf/include_fields', function() {
                         'aria-label' => '',
                         'type' => 'text',
                         'instructions' => '',
-                        'required' => 1,
+                        'required' => 0,
                         'conditional_logic' => 0,
                         'wrapper' => array(
                             'width' => '',
@@ -1033,7 +1035,7 @@ add_action( 'acf/include_fields', function() {
                         'aria-label' => '',
                         'type' => 'link',
                         'instructions' => '',
-                        'required' => 1,
+                        'required' => 0,
                         'conditional_logic' => 0,
                         'wrapper' => array(
                             'width' => '',
@@ -1050,7 +1052,7 @@ add_action( 'acf/include_fields', function() {
                         'aria-label' => '',
                         'type' => 'wysiwyg',
                         'instructions' => '',
-                        'required' => 1,
+                        'required' => 0,
                         'conditional_logic' => 0,
                         'wrapper' => array(
                             'width' => '',
@@ -1112,7 +1114,7 @@ add_action( 'acf/include_fields', function() {
                                 'aria-label' => '',
                                 'type' => 'text',
                                 'instructions' => '',
-                                'required' => 1,
+                                'required' => 0,
                                 'conditional_logic' => 0,
                                 'wrapper' => array(
                                     'width' => '',
@@ -1133,7 +1135,7 @@ add_action( 'acf/include_fields', function() {
                                 'aria-label' => '',
                                 'type' => 'wysiwyg',
                                 'instructions' => '',
-                                'required' => 1,
+                                'required' => 0,
                                 'conditional_logic' => 0,
                                 'wrapper' => array(
                                     'width' => '',
@@ -1154,7 +1156,7 @@ add_action( 'acf/include_fields', function() {
                                 'aria-label' => '',
                                 'type' => 'image',
                                 'instructions' => '',
-                                'required' => 1,
+                                'required' => 0,
                                 'conditional_logic' => 0,
                                 'wrapper' => array(
                                     'width' => '',
@@ -1289,7 +1291,8 @@ add_action( 'acf/include_fields', function() {
         'location' => array(
             array(
                 array(
-                    'param' => 'options_page',
+                    'param' => 'options_pag
+                    e',
                     'operator' => '==',
                     'value' => 'site-options',
                 ),
