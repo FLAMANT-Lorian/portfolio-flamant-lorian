@@ -66,9 +66,8 @@ register_post_type('contact_message', [
 
 
 // Navigation menu
-register_nav_menu('header', 'Le menu de navigation principale - FR');
-register_nav_menu('header', 'Le menu de navigation principale - EN');
-register_nav_menu('footer', 'Le menu de navigation secondaire - FR');
+register_nav_menu('header', 'Le menu de navigation principale');
+register_nav_menu('footer', 'Le menu de navigation secondaire');
 
 function dw_get_navigation_links(string $location): array
 {
