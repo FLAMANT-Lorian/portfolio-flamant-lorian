@@ -11,6 +11,11 @@
 </head>
 <body>
 <header>
+    <p>
+        <?= __trans('Pour accéder à toutes les fonctionnalités de ce site, vous devez activer JavaScript.'); ?>
+        <?= __trans('Voici les'); ?>
+        <a href="https://www.enable-javascript.com/fr/"><?= __trans('instructions pour activer JavaScript dans votre navigateur Web') ?></a>.
+    </p>
     <h1><?= __trans('Portfolio de Lorian Flamant'); ?></h1>
     <nav>
         <a class="skip__link" href="#contenu"
@@ -29,7 +34,8 @@
         <ul class="nav__container">
             <?php foreach (dw_get_navigation_links('header') as $link): ?>
                 <li class="nav__item">
-                    <a href="<?= $link->href; ?>" class="nav__links" title="Aller sur la page : <?= $link->label ?>">
+                    <a href="<?= $link->href; ?>" class="nav__links"
+                       title="<?= __trans('Aller sur la page : ') ?><?= $link->label ?>">
                         <?= $link->label; ?>
                     </a>
                 </li>
