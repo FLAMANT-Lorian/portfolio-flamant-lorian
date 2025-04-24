@@ -741,7 +741,7 @@ add_action( 'acf/include_fields', function() {
                 ),
                 'default_value' => '',
                 'allow_in_bindings' => 0,
-                'tabs' => 'all',
+                'tabs' => 'visual',
                 'toolbar' => 'full',
                 'media_upload' => 1,
                 'delay' => 0,
@@ -758,7 +758,7 @@ add_action( 'acf/include_fields', function() {
         ),
         'menu_order' => 0,
         'position' => 'normal',
-        'style' => 'default',
+        'style' => 'seamless',
         'label_placement' => 'top',
         'instruction_placement' => 'label',
         'hide_on_screen' => array(
