@@ -54,7 +54,7 @@ register_post_type('project', [
 register_post_type('contact_message', [
     'label' => 'Messages',
     'description' => 'Messages lié au formulaire de contact',
-    'menu_position' => 10, /*Position dans l'admin wordpress => Voir les position su internet*/
+    'menu_position' => 10, /*Position dans l'admin wordpress => Voir les position sur internet*/
     'menu_icon' => 'dashicons-email',
     'public' => false,
     'has_archive' => false, // Pour faire apparaitre les menus recettes et voyages dans les screen options de WordPress
@@ -67,6 +67,7 @@ register_post_type('contact_message', [
 
 // Navigation menu
 register_nav_menu('header', 'Le menu de navigation principale - FR');
+register_nav_menu('header', 'Le menu de navigation principale - EN');
 register_nav_menu('footer', 'Le menu de navigation secondaire - FR');
 
 function dw_get_navigation_links(string $location): array
