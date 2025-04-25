@@ -42,7 +42,7 @@ register_post_type('project', [
     'menu_position' => 20,
     'menu_icon' => 'dashicons-portfolio',
     'public' => true,
-    'has_archive' => true,
+    'has_archive' => false,
     'rewrite' => [
         'slug' => 'projets',
     ],
