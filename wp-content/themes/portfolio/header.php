@@ -6,7 +6,7 @@
     <meta name="description" content="<?= __trans('Portfolio de Lorian Flamant'); ?>">
     <meta name="keywords" content="HEPL, Web Developer, Flamant Lorian">
     <meta name="Auhtor" content="<?= get_field('first_name', 'options') . ' ' . get_field('last_name', 'options') ?>">
-    <title><?= wp_title('·', 'false', 'right') . get_bloginfo('name'); ?></title>
+    <title><?= get_the_title() . ' · Portoflio' ?></title>
     <?php wp_head(); ?>
 </head>
 <body>

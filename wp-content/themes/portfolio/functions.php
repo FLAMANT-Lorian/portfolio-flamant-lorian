@@ -21,7 +21,7 @@ add_action('wp_enqueue_scripts', function () {
 
 // Register a new taxonomy for filter projects
 
-register_taxonomy('Projects', ['project'], [
+register_taxonomy('projects', ['project'], [
     'labels' => [
         'name' => 'Types de projet',
         'singular_name' => 'Types de projet'
@@ -173,4 +173,58 @@ function __trans(string $translation, array $replacements = [])
 }
 
 
-// Ajouter la fonction SRCSET + Regarder pour l'adapter avec WEBP
+// Add automatic SRCSET dunction
+
+function responsive_image($image, array $settings)
+{
+    $image_id = '';
+    if (empty($image)) {
+        return '';
+    }
+
+    if (is_numeric($image)) {
+        $image_id = $image;
+    } else if (is_array($image) && isset($image['ID'])) {
+        $image_id = $image['ID'];
+    } else {
+        return '';
+        // Générer un tag par défaut
+    }
+
+// Récupérer les données de l'imahe depuis le BD
+    $alt = get_post_meta($image_id, '_wp_get_attachment_image_alt', true);
+    $image_post = get_post($image_id); // Objet WP Post de l'image
+    $title = $image_post->post_title ?? '';
+    $name = $image_post->post_name ?? '';
+
+// Récupération des URLs et attributs pour l'image en taille 'full'
+    $src = wp_get_attachment_image_url($image_id, 'full');
+    $srcset = wp_get_attachment_image_srcset($image_id, 'full');
+    $sizes = wp_get_attachment_image_sizes($image_id, 'full');
+
+// Gestion de l'attribut de chargement "lazy" ou "eager" selon les paramètres
+    $lazy = $settings['lazy'] ?? 'eager';
+
+// Gestion des classes (Si les classes sont fournies dans settings)
+    $classes = '';
+
+    if (!empty($settings['classes'])) {
+        $classes = is_array($settings['classes']) ? implode(' ', $settings['classes']) : $settings['classes'];
+    }
+
+    ob_start();
+    ?>
+    <picture>
+        <img src="<?= esc_url($src) ?>"
+             alt="<?= esc_attr($alt) ?>"
+             loading="<?= esc_attr($lazy) ?>"
+             srcset="<?= esc_attr($srcset) ?>"
+             sizes="<?= esc_attr($sizes) ?>"
+             class="<?= esc_attr($classes); ?>">
+    </picture>
+
+    <?php
+    return ob_get_clean();
+
+    // Regarder pour créer les images en "webp" pour de meilleur performance
+}

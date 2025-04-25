@@ -1,10 +1,13 @@
 <?php get_header(); ?>
 
-<?php if (have_posts()): while (have_posts()): the_post(); ?>
+<?php include('template/partials/single-project/stage.php');
 
-    <h1><?= get_the_content(); ?>
-
-<?php endwhile; endif; ?>
+if (have_rows('content')): while (have_rows('content')): the_row();
+    if (get_row_layout() === 'text-media-project'):
+        include('template/content/text-media/text-media-project.php');
+    endif;
+endwhile;
+endif;
+?>
 
 <?php get_footer(); ?>
-
