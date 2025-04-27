@@ -13,7 +13,7 @@ if (have_posts()): while (have_posts()): the_post(); ?>
         ]);
 
         if ($projects->have_posts()): while ($projects->have_posts()): $projects->the_post(); ?>
-        
+
             <article>
                 <h3><?= get_the_title(); ?></h3>
                 <figure>
