@@ -46,9 +46,6 @@ register_post_type('project', [
     'rewrite' => [
         'slug' => 'projets',
     ],
-    'supports' => [
-        'title', 'editor', 'excerpt', 'thumbnail',
-    ],
 ]);
 
 register_post_type('contact_message', [
