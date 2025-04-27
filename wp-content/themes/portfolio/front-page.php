@@ -13,14 +13,14 @@ if (have_posts()): while (have_posts()): the_post(); ?>
         ]);
 
         if ($projects->have_posts()): while ($projects->have_posts()): $projects->the_post(); ?>
-
+        
             <article>
                 <h3><?= get_the_title(); ?></h3>
                 <figure>
                     <img src="" alt="">
                 </figure>
                 <a href="<?= get_the_permalink(); ?>" class="" title="Découvrir le projet">
-                    <span class="sro">Découvrir le projet :<?= get_the_title(); ?></span>
+                    <span class="sro">Découvrir le projet : <?= get_the_title(); ?></span>
                 </a>
             </article>
 
