@@ -106,6 +106,7 @@ add_filter('show_admin_bar', '__return_false');
 
 // Handling contact form
 use Portfolio\Forms\ContactForm;
+
 require __DIR__ . '/forms/ContactForm.php';
 
 add_action('admin_post_nopriv_dw_submit_contact_form', 'handle_contact_form'); // On est connecter
@@ -120,7 +121,7 @@ function handle_contact_form()
         'message' => 'required'
     ]);
 
-    return ContactForm::handle($_REQUEST);
+    ContactForm::handle($_REQUEST);
 }
 
 // Add site option page
@@ -143,6 +144,7 @@ function create_site_options_page()
         ]);
     }
 }
+
 add_action('acf/init', 'create_site_options_page');
 
 // Add text translation function
