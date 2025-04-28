@@ -4,9 +4,7 @@
         <h3><?= get_field('job-title'); ?></h3>
         <p><?= get_field('job-description'); ?></p>
     </div>
-    <figure>
-        <img src="" alt="">
-    </figure>
+    <?= responsive_image(get_field('profile-picture'), ['loading' => 'lazy', 'classes' => '']); ?>>
     <a href="<?= get_field('high-link')['url']; ?>" title="Aller sur la page : À propos">
         <?= get_field('high-link')['title']; ?>
     </a>

@@ -11,5 +11,5 @@ $position = get_sub_field('position');
             <?= $text; ?>
         </p>
     </div>
-    <?= responsive_image($image, []) ?>
+    <?= responsive_image($image, ['loading' => 'lazy', 'classes' => '']) ?>
 </section>

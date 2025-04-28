@@ -16,6 +16,6 @@ $image = get_sub_field('image');
         <?php endforeach; ?>
     </div>
     <figure>
-        <?= responsive_image($image, ['class' => 'image']); ?>
+        <?= responsive_image($image, ['loading' => 'lazy', 'classes' => 'image']); ?>
     </figure>
 </section>

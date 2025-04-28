@@ -84,8 +84,6 @@ function dw_get_navigation_links(string $location): array
         $link = new stdClass(); // Créer un objet vide en PHP
         $link->href = $post->url;
         $link->label = $post->title;
-        $link->icon = get_field('icon', $post);
-
         $links[] = $link; // Version raccourci pour pousser des élémnts dans un tableaux
     }
     return $links;
@@ -190,8 +188,8 @@ function responsive_image($image, array $settings)
         // Générer un tag par défaut
     }
 
-// Récupérer les données de l'imahe depuis le BD
-    $alt = get_post_meta($image_id, '_wp_get_attachment_image_alt', true);
+// Récupérer les données de l'image depuis le BD
+    $alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
     $image_post = get_post($image_id); // Objet WP Post de l'image
     $title = $image_post->post_title ?? '';
     $name = $image_post->post_name ?? '';
@@ -202,7 +200,7 @@ function responsive_image($image, array $settings)
     $sizes = wp_get_attachment_image_sizes($image_id, 'full');
 
 // Gestion de l'attribut de chargement "lazy" ou "eager" selon les paramètres
-    $lazy = $settings['lazy'] ?? 'eager';
+    $lazy = $settings['loading'] ?? 'eager';
 
 // Gestion des classes (Si les classes sont fournies dans settings)
     $classes = '';
@@ -211,8 +209,8 @@ function responsive_image($image, array $settings)
         $classes = is_array($settings['classes']) ? implode(' ', $settings['classes']) : $settings['classes'];
     }
 
-    ob_start();
-    ?>
+    ob_start(); ?>
+
     <picture>
         <img src="<?= esc_url($src) ?>"
              alt="<?= esc_attr($alt) ?>"
