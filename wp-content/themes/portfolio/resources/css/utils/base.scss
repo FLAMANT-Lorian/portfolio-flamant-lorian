@@ -1,13 +1,17 @@
 @import "../settings/variable";
 
+body {
+  max-width: 2000px;
+}
+
 main {
   padding: 72px 20px;
 
-  @media (min-width: $min-tablet) and (max-width: $max-tablet) {
+  @media (min-width: $min-tablet) and (max-width: $mixed-tablet) {
     padding: 96px 32px;
   }
 
-  @media (min-width: 1710px) {
+  @media (min-width: $mixed-tablet) {
     padding: 136px 144px;
   }
 }
@@ -61,18 +65,30 @@ h2 {
     margin-left: -10px;
   }
 
-  @media (min-width: $min-tablet) and (max-width: $max-tablet) {
+  @media (min-width: $min-tablet) and (max-width: $mixed-tablet) {
     font-size: 100px;
     line-height: 90px;
+
 
     .last__point {
       margin-left: -20px;
     }
   }
 
-  @media (min-width: 1710px) {
+  @media (min-width: $mixed-tablet) {
+    font-size: 140px;
+    line-height: 120px;
+    letter-spacing: -0.01em;
+
+    .last__point {
+      margin-left: -25px;
+    }
+  }
+
+  @media (min-width: $max-tablet) {
     font-size: 220px;
     line-height: 198px;
+    letter-spacing: -0.025em;
 
     .last__point {
       margin-left: -45px;
@@ -89,7 +105,16 @@ h3 {
     margin-left: -6px;
   }
 
-  @media (min-width: 1710px) {
+  @media (min-width: $mixed-tablet) {
+    font-size: 32px;
+    line-height: 30px;
+
+    .last__point {
+      margin-left: -5px;
+    }
+  }
+
+  @media (min-width: $max-tablet) {
     font-size: 40px;
     line-height: 45px;
     letter-spacing: -0.008em;
@@ -107,7 +132,7 @@ p {
   font-weight: 400;
   line-height: 28px;
 
-  @media (min-width: 1710px) {
+  @media (min-width: $max-tablet) {
     font-size: 20px;
     line-height: 34px;
   }
@@ -162,7 +187,7 @@ a {
     transform: rotate(45deg);
   }
 
-  @media (min-width: $min-tablet) and (max-width: $max-tablet) {
+  @media (min-width: $min-tablet) and (max-width: $mixed-tablet) {
     margin-top: 72px;
   }
 }
