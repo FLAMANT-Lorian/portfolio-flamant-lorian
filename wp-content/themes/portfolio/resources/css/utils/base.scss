@@ -2,6 +2,7 @@
 
 body {
   max-width: 2000px;
+  position: relative;
 }
 
 main {
@@ -91,7 +92,7 @@ h2 {
     letter-spacing: -0.025em;
 
     .last__point {
-      margin-left: -45px;
+      margin-left: -30px;
     }
   }
 }

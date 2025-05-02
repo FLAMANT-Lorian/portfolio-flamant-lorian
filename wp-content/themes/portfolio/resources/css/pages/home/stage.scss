@@ -81,6 +81,7 @@
 
     .btn__container {
       grid-area: link;
+      justify-self: end;
     }
 
     &--link {
