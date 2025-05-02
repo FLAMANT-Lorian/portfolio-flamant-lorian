@@ -19,6 +19,15 @@ add_action('wp_enqueue_scripts', function () {
     wp_dequeue_style('global-styles');
 }, 20);
 
+add_action('init', 'init_remove_support', 100);
+
+function init_remove_support(): void
+{
+    remove_post_type_support('post', 'editor');
+    remove_post_type_support('page', 'editor');
+    remove_post_type_support('product', 'editor');
+}
+
 // Register a new taxonomy for filter projects
 
 register_taxonomy('projects', ['project'], [
@@ -222,6 +231,52 @@ function responsive_image($image, array $settings)
 
     <?php
     return ob_get_clean();
+}
 
-    // Regarder pour créer les images en "webp" pour de meilleur performance
+
+// Configuration Vite
+
+function enqueue_assets_from_vite_manifest(): void
+{
+    $manifestPath = get_theme_file_path('public/.vite/manifest.json');
+
+    if (file_exists($manifestPath)) {
+        $manifest = json_decode(file_get_contents($manifestPath), true);
+
+        // Vérifier et ajouter le fichier JavaScript
+        if (isset($manifest['wp-content/themes/portfolio/resources/js/main.js'])) {
+            wp_enqueue_script('portfolio',
+                get_theme_file_uri('public/' . $manifest['wp-content/themes/portfolio/resources/js/main.js']['file']), [], null, true);
+        }
+
+        // Vérifier et ajouter le fichier CSS
+        if (isset($manifest['wp-content/themes/portfolio/resources/css/style.scss'])) {
+            wp_enqueue_style('portfolio',
+                get_theme_file_uri('public/' . $manifest['wp-content/themes/portfolio/resources/css/style.scss']['file']));
+        }
+    }
+}
+
+if (!is_admin()) {
+    enqueue_assets_from_vite_manifest();
+}
+
+// 1. Charger un fichier "public" (asset/image/css/script/...) pour le front-end sans que cela ne s'applique à l'admin.
+function portfolio_asset(string $file): string
+{
+    $manifestPath = get_theme_file_path('public/.vite/manifest.json');
+
+    if (file_exists($manifestPath)) {
+        $manifest = json_decode(file_get_contents($manifestPath), true);
+
+        if (isset($manifest['wp-content/themes/portfolio/resources/js/main.js']) && $file === 'js') {
+            return get_theme_file_uri('public/' . $manifest['wp-content/themes/portfolio/resources/js/main.js']['file']);
+        }
+
+        if (isset($manifest['wp-content/themes/portfolio/resources/css/style.scss']) && $file === 'css') {
+            return get_theme_file_uri('public/' . $manifest['wp-content/themes/portfolio/resources/css/styles.scss']['file']);
+        }
+    }
+
+    return get_template_directory_uri() . '/public/' . $file;
 }
