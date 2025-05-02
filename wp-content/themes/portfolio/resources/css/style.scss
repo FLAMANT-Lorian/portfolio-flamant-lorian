@@ -1,1 +1,9 @@
+// HELPERS
 @use 'utils/reset';
+@use 'utils/base';
+
+// SETTINGS
+@use 'settings/variable';
+
+// PAGES
+@use 'pages/home/stage';

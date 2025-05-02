@@ -8,8 +8,7 @@
     <meta name="Auhtor" content="<?= get_field('first_name', 'options') . ' ' . get_field('last_name', 'options') ?>">
     <title><?= get_the_title() . ' · Portoflio' ?></title>
     <link rel="stylesheet" type="text/css" href="<?= portfolio_asset('css'); ?>">
-    <script src="<?= portfolio_asset('js') ?>" defer></script>
-    <?php wp_head(); ?>
+    <script src="<?= portfolio_asset('js') ?>" defer ></script>
 </head>
 <body>
 <header>

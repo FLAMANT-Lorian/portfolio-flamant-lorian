@@ -220,7 +220,7 @@ function responsive_image($image, array $settings)
 
     ob_start(); ?>
 
-    <picture>
+    <picture class="picture--container">
         <img src="<?= esc_url($src) ?>"
              alt="<?= esc_attr($alt) ?>"
              loading="<?= esc_attr($lazy) ?>"
@@ -274,7 +274,7 @@ function portfolio_asset(string $file): string
         }
 
         if (isset($manifest['wp-content/themes/portfolio/resources/css/style.scss']) && $file === 'css') {
-            return get_theme_file_uri('public/' . $manifest['wp-content/themes/portfolio/resources/css/styles.scss']['file']);
+            return get_theme_file_uri('public/' . $manifest['wp-content/themes/portfolio/resources/css/style.scss']['file']);
         }
     }
 

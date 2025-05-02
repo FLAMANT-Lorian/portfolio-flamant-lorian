@@ -3,34 +3,43 @@ if (have_posts()): while (have_posts()): the_post(); ?>
 
     <?php include('template/partials/home/stage.php'); ?>
 
-    <section>
+    <section class="recent__project">
         <h2 class="sro">Mes derniers projets</h2>
-        <?php $projects = new WP_Query([
-            'post_type' => 'project',
-            'order' => 'DESC',
-            'orderby' => 'date',
-            'posts_per_page' => 2,
-        ]);
+        <div class="projects__card__container">
+            <?php $projects = new WP_Query([
+                'post_type' => 'project',
+                'order' => 'DESC',
+                'orderby' => 'date',
+                'posts_per_page' => 2,
+            ]);
 
-        if ($projects->have_posts()): while ($projects->have_posts()): $projects->the_post(); ?>
+            if ($projects->have_posts()): while ($projects->have_posts()): $projects->the_post();
+                $image = get_field('stage')['card-image'];
+                ?>
 
-            <article>
-                <h3><?= get_the_title(); ?></h3>
-                <figure>
-                    <img src="" alt="">
-                </figure>
-                <a href="<?= get_the_permalink(); ?>" class="" title="Découvrir le projet">
-                    <span class="sro">Découvrir le projet : <?= get_the_title(); ?></span>
-                </a>
-            </article>
+                <article class="project__card">
+                    <h3 class="project__card--title">
+                        <?= get_the_title(); ?>
+                    </h3>
+                    <?= responsive_image($image, ['loading' => 'eager', 'classes' => 'project__card--image']) ?>
+                    <a href="<?= get_the_permalink(); ?>"
+                       class="project__card--link"
+                       title="Découvrir le projet">
+                        <span class="sro">Découvrir le projet : <?= get_the_title(); ?></span>
+                    </a>
+                </article>
 
-        <?php endwhile; else: ?>
-            <p>Il n'y a aucun projets à voir pour le moment</p>
-        <?php endif; ?>
-        <?php wp_reset_postdata(); ?>
-        <a href="<?= get_field('low-link')['url']; ?>" title="Aller sur la page : Mes projets">
-            <?= get_field('low-link')['title']; ?>
-        </a>
+            <?php endwhile; else: ?>
+                <p>Il n'y a aucun projets à voir pour le moment</p>
+            <?php endif; ?>
+            <?php wp_reset_postdata(); ?>
+        </div>
+        <div class="btn__container">
+            <a href="<?= get_field('low-link')['url']; ?>" title="Aller sur la page : Mes projets"
+               class="home--sublink arrow__link">
+                <?= get_field('low-link')['title']; ?>
+            </a>
+        </div>
     </section>
 
 <?php endwhile; endif;

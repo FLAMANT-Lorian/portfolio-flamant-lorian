@@ -1,0 +1,174 @@
+@import "../settings/variable";
+
+main {
+  padding: 72px 20px;
+
+  @media (min-width: $min-tablet) and (max-width: $max-tablet) {
+    padding: 96px 32px;
+  }
+
+  @media (min-width: 1710px) {
+    padding: 136px 144px;
+  }
+}
+
+// resize images
+.picture--container {
+  display: block;
+  max-height: 100%;
+
+  img {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: top;
+  }
+}
+
+// SCREEN READER ONLY
+
+.sro {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
+// TYPOGRAPHIE
+
+h1, h2, h3, h4, h5 {
+  color: $black;
+  font-family: $inter;
+  text-transform: uppercase;
+
+  .last__point {
+    color: $red;
+  }
+}
+
+h2 {
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 55px;
+  letter-spacing: -0.006em;
+
+  .last__point {
+    margin-left: -10px;
+  }
+
+  @media (min-width: $min-tablet) and (max-width: $max-tablet) {
+    font-size: 100px;
+    line-height: 90px;
+
+    .last__point {
+      margin-left: -20px;
+    }
+  }
+
+  @media (min-width: 1710px) {
+    font-size: 220px;
+    line-height: 198px;
+
+    .last__point {
+      margin-left: -45px;
+    }
+  }
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+
+  .last__point {
+    margin-left: -6px;
+  }
+
+  @media (min-width: 1710px) {
+    font-size: 40px;
+    line-height: 45px;
+    letter-spacing: -0.008em;
+
+    .last__point {
+      margin-left: -8px;
+    }
+  }
+}
+
+p {
+  color: $grey;
+  font-family: $montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+
+  @media (min-width: 1710px) {
+    font-size: 20px;
+    line-height: 34px;
+  }
+}
+
+// ARROW LINK
+.btn__container {
+  text-align: center;
+}
+
+a {
+  display: block;
+  font-family: $inter;
+  text-decoration: none;
+}
+
+.arrow__link {
+  display: inline-flex;
+  margin: 32px auto 0;
+  color: $red;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+
+  &:before {
+    background-color: transparent;
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    height: 1px;
+    transition: bottom .3s ease-out;
+  }
+
+  &:hover:before {
+    bottom: -2px;
+    width: 100%;
+    background-color: $red;
+  }
+
+  &:after {
+    transition: all .3s ease-out;
+    content: url("../../resources/img/arrow-link.svg");
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 16px;
+  }
+
+  &:hover:after {
+    transform: rotate(45deg);
+  }
+
+  @media (min-width: $min-tablet) and (max-width: $max-tablet) {
+    margin-top: 72px;
+  }
+}
+
+// TMP
+
+header, footer {
+  display: none;
+}

@@ -50,7 +50,7 @@
         <?php if ($query->have_posts()): while ($query->have_posts()): $query->the_post(); ?>
 
             <article>
-                <h3><?= get_field('main-title'); ?></h3>
+                <h3><?= get_field('stage')['main-title']; ?></h3>
                 <figure>
                     <img src="" alt="">
                 </figure>

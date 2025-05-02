@@ -1,8 +1,20 @@
 {
   "wp-content/themes/portfolio/resources/css/style.scss": {
-    "file": "assets/css-D0fh3uF9.css",
+    "file": "assets/css-BCyQL4nW.css",
     "src": "wp-content/themes/portfolio/resources/css/style.scss",
     "isEntry": true
+  },
+  "wp-content/themes/portfolio/resources/font/Inter-VariableFont_opsz,wght.ttf": {
+    "file": "assets/Inter-VariableFont_opsz_wght-c8O0ljhh.ttf",
+    "src": "wp-content/themes/portfolio/resources/font/Inter-VariableFont_opsz,wght.ttf"
+  },
+  "wp-content/themes/portfolio/resources/font/Montserrat-Regular.ttf": {
+    "file": "assets/Montserrat-Regular-Cw3fqWkz.ttf",
+    "src": "wp-content/themes/portfolio/resources/font/Montserrat-Regular.ttf"
+  },
+  "wp-content/themes/portfolio/resources/img/arrow-link.svg": {
+    "file": "assets/arrow-link-BmmDdbWO.svg",
+    "src": "wp-content/themes/portfolio/resources/img/arrow-link.svg"
   },
   "wp-content/themes/portfolio/resources/js/main.js": {
     "file": "assets/js-l0sNRNKZ.js",

@@ -10,31 +10,37 @@ endwhile;
 endif;
 ?>
 
-    <section>
+    <section class="others__projects">
         <h2>Découvrir d'autres projets</h2>
-        <div>
-            <?php
-            $projects = new WP_Query([
+        <div class="projects__card__container">
+            <?php $projects = new WP_Query([
                 'post_type' => 'project',
                 'order' => 'DESC',
                 'orderby' => 'rand',
-                'posts_per_page' => 3,
+                'posts_per_page' => 2,
                 'post__not_in' => [$post->ID],
             ]);
 
-            if ($projects->have_posts()): while ($projects->have_posts()): $projects->the_post(); ?>
+            if ($projects->have_posts()): while ($projects->have_posts()): $projects->the_post();
+                $image = get_field('stage')['card-image'];
+                ?>
 
-                <article>
-                    <h3><?= get_the_title(); ?></h3>
-                    <figure>
-                        <img src="" alt="">
-                    </figure>
-                    <a href="<?= get_the_permalink(); ?>" class="" title="Découvrir le projet">
+                <article class="project__card">
+                    <h3 class="project__card--title">
+                        <?= get_the_title(); ?>
+                    </h3>
+                    <?= responsive_image($image, ['loading' => 'eager', 'classes' => 'project__card--image']) ?>
+                    <a href="<?= get_the_permalink(); ?>"
+                       class="project__card--link"
+                       title="Découvrir le projet">
                         <span class="sro">Découvrir le projet : <?= get_the_title(); ?></span>
                     </a>
                 </article>
 
-            <?php endwhile; endif; ?>
+            <?php endwhile; else: ?>
+                <p>Il n'y a aucun projets à voir pour le moment</p>
+            <?php endif; ?>
+            <?php wp_reset_postdata(); ?>
         </div>
     </section>
 

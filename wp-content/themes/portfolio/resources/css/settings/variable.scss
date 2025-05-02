@@ -1,0 +1,30 @@
+// COULEUR
+$black: #100C08;
+$grey: #5B5959;
+$white: #FBFCFA;
+$red: #F75B5B;
+
+$light-grey-hover: #EFEFEF;
+
+// MEDIA QUERIES
+
+$min-tablet: 680px;
+$max-tablet: 1710px;
+
+
+// POLICE
+$montserrat: 'Montserrat', Helvetica, Arial, Roboto, Open Sans, sans-serif;
+$inter: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../font/Montserrat-Regular.ttf");
+}
+
+
+@font-face {
+  font-family: 'Inter';
+  src: url("../font/Inter-VariableFont_opsz,wght.ttf");
+  font-weight: 100 900;
+}
