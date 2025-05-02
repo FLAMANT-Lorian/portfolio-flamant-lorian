@@ -1,0 +1,24 @@
+@import "../settings/variable";
+
+@media (min-width: $min-tablet) {
+  .lines {
+    box-sizing: border-box;
+    padding: 0 182px;
+    position: absolute;
+    z-index: -10;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+
+    @media (min-width: $mixed-tablet) {
+      padding: 0 298px;
+    }
+
+    .line {
+      height: 100%;
+      width: 1px;
+      background-color: $red-line;
+    }
+  }
+}
