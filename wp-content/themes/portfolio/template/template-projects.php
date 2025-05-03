@@ -4,7 +4,7 @@
 
 <?php include('partials/project/stage.php'); ?>
 
-<section>
+<section class="projects__container">
     <h2 class="sro">L'ensemble de mes projets</h2>
     <?php
     $taxonomy = isset($_GET['filter']) ? sanitize_text_field($_GET['filter']) : '';
@@ -33,35 +33,36 @@
 
     $current_filter = isset($_GET['filter']) ? sanitize_text_field($_GET['filter']) : '';
     ?>
+    <div class="filter__container">
+        <a href="<?= esc_url(get_permalink()); ?>"
+           class="filter <?= ($current_filter === '') ? 'active' : ''; ?>">
+            Tout
+        </a>
 
-    <div class="">
-        <div class="">
-            <a href="<?= esc_url(get_permalink()); ?>" class="<?= ($current_filter === '') ? 'active-project' : ''; ?>">
-                Tout
+        <?php foreach ($terms as $term): ?>
+            <a href="<?= esc_url(get_permalink()) . '?filter=' . $term->slug; ?>"
+               class="filter <?= ($current_filter === $term->slug) ? 'active' : ''; ?>">
+                <?= esc_html($term->name); ?>
             </a>
+        <?php endforeach; ?>
+    </div>
+    <?php if ($query->have_posts()): while ($query->have_posts()): $query->the_post(); ?>
 
-            <?php foreach ($terms as $term): ?>
-                <a href="<?= esc_url(get_permalink()) . '?filter=' . $term->slug; ?>"
-                   class="<?= ($current_filter === $term->slug) ? 'active-project' : ''; ?>">
-                    <?= esc_html($term->name); ?>
-                </a>
-            <?php endforeach; ?>
-        </div>
-        <?php if ($query->have_posts()): while ($query->have_posts()): $query->the_post(); ?>
+        <article class="single__project">
+            <h3 class="single__project--title">
+                <?= get_the_title(); ?>
+            </h3>
+            <?= responsive_image( '', ['loading' => "eager", 'classes' => 'single__project--image']); ?>
+            <a href="<?= get_the_permalink(); ?>"
+               class="single__project--link"
+               title="Découvrir le projet">
+                <span class="sro">Découvrir le projet :<?= get_the_title(); ?></span>
+            </a>
+        </article>
 
-            <article>
-                <h3><?= get_field('stage')['main-title']; ?></h3>
-                <figure>
-                    <img src="" alt="">
-                </figure>
-                <a href="<?= get_the_permalink(); ?>" class="" title="Découvrir le projet">
-                    <span class="sro">Découvrir le projet :<?= get_the_title(); ?></span>
-                </a>
-            </article>
-
-        <?php endwhile; else : ?>
-            <p>La page est vide !</p>
-        <?php endif; ?>
+    <?php endwhile; else : ?>
+        <p>La page est vide !</p>
+    <?php endif; ?>
 </section>
 
 <?php get_footer(); ?>
