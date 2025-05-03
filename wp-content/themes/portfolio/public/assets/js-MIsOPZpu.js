@@ -1,0 +1,1 @@
+document.documentElement.classList.add("js-enabled");const e=document.querySelector(".bgm--checkbox");e.addEventListener("change",function(){e.checked?document.body.style.overflow="hidden":document.body.style.overflow="initial"});
