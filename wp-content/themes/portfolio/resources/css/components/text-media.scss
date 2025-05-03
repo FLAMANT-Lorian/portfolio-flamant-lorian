@@ -1,0 +1,11 @@
+.text__media {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 96px;
+
+  &--image {
+    max-height: 250px;
+    object-fit: cover;
+  }
+}

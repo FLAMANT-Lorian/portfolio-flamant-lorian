@@ -9,7 +9,11 @@
 // PAGES
 @use 'pages/home';
 @use 'pages/projects';
+@use 'pages/about';
 
 //COMPONENTS
 @use 'components/line';
 @use 'components/header';
+@use 'components/text-media';
+@use 'components/school-steps';
+@use 'components/engagements';

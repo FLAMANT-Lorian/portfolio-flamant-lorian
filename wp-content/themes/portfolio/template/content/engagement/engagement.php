@@ -5,17 +5,31 @@ $link = get_sub_field('link');
 $engagements = get_sub_field('engagement-card');
 ?>
 
-<section>
-    <div class="left__container">
-        <h3><?= $title; ?></h3>
-        <p><?= $description; ?></p>
-        <a href="<?= $link['url']; ?>"><?= $link['title']; ?></a>
+<section class="engagements">
+    <div class="info__container">
+        <h3 class="engagements--title">
+            <?= $title; ?>
+            <span class="last__point">.</span>
+        </h3>
+        <p class="engagements--text">
+            <?= $description; ?>
+        </p>
+        <div class="btn__container">
+        <a href="<?= $link['url']; ?>"
+           class="arrow__link engagements--link">
+            <?= $link['title']; ?>
+        </a>
+        </div>
     </div>
-    <div class="right__container">
+    <div class="engagements__container">
         <?php foreach ($engagements as $engagement): ?>
-            <article>
-                <h4><?= $engagement['engagement-name']; ?></h4>
-                <p><?= $engagement['engagement-description']; ?></p>
+            <article class="simple__engagement">
+                <h4 class="simple__engagement--title">
+                    <?= $engagement['engagement-name']; ?>
+                </h4>
+                <p class="simple__engagement--text">
+                    <?= $engagement['engagement-description']; ?>
+                </p>
             </article>
         <?php endforeach; ?>
     </div>

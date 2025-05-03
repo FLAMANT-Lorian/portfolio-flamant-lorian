@@ -1,0 +1,52 @@
+@import '../settings/variable';
+
+.engagements {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 96px;
+}
+
+.info__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+
+  .arrow__link {
+    margin: 0;
+  }
+}
+
+.engagements__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.simple__engagement {
+  position: relative;
+  padding: 24px;
+
+  &--title {
+    text-transform: none;
+    padding-bottom: 24px;
+  }
+
+  &:before {
+    border-top: 4px solid $red;
+    border-left: 4px solid $red;
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    transition: width .3s ease-out, height .3s ease-out;
+  }
+
+  &:hover:before, &:active:before {
+    width: 75px;
+    height: 75px;
+  }
+}

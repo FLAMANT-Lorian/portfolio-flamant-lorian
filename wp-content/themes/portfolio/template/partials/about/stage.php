@@ -3,9 +3,17 @@ $stage = get_field('stage');
 ?>
 
 <?php if (have_rows('stage')): while (have_rows('stage')):the_row(); ?>
-    <section>
-        <h2><?= $stage['main-title']; ?></h2>
-        <a href="<?= $stage['link']['url']; ?>"><?= $stage['link']['title']; ?></a>
+    <section class="about">
+        <h2 class="about--title">
+            <?= $stage['main-title']; ?>
+            <span class="last__point">.</span>
+        </h2>
+        <div class="btn__container">
+            <a href="<?= $stage['link']['url']; ?>"
+               class="arrow__link about--link">
+                <?= $stage['link']['title']; ?>
+            </a>
+        </div>
     </section>
 <?php
 endwhile;
