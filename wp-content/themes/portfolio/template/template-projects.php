@@ -4,7 +4,7 @@
 
 <?php include('partials/project/stage.php'); ?>
 
-<section class="projects__container">
+<section>
     <h2 class="sro">L'ensemble de mes projets</h2>
     <?php
     $taxonomy = isset($_GET['filter']) ? sanitize_text_field($_GET['filter']) : '';
@@ -46,23 +46,27 @@
             </a>
         <?php endforeach; ?>
     </div>
-    <?php if ($query->have_posts()): while ($query->have_posts()): $query->the_post(); ?>
+    <div class="projects__container">
 
-        <article class="single__project">
-            <h3 class="single__project--title">
-                <?= get_the_title(); ?>
-            </h3>
-            <?= responsive_image( '', ['loading' => "eager", 'classes' => 'single__project--image']); ?>
-            <a href="<?= get_the_permalink(); ?>"
-               class="single__project--link"
-               title="Découvrir le projet">
-                <span class="sro">Découvrir le projet :<?= get_the_title(); ?></span>
-            </a>
-        </article>
+        <?php if ($query->have_posts()): while ($query->have_posts()): $query->the_post(); ?>
 
-    <?php endwhile; else : ?>
-        <p>La page est vide !</p>
-    <?php endif; ?>
+            <article class="single__project">
+                <h3 class="single__project--title">
+                    <?= get_the_title(); ?>
+                </h3>
+                <?= responsive_image('', ['loading' => "eager", 'classes' => 'single__project--image']); ?>
+                <a href="<?= get_the_permalink(); ?>"
+                   class="single__project--link"
+                   title="Découvrir le projet">
+                    <span class="sro">Découvrir le projet :<?= get_the_title(); ?></span>
+                </a>
+            </article>
+
+        <?php endwhile; else : ?>
+            <p>La page est vide !</p>
+        <?php endif; ?>
+
+    </div>
 </section>
 
 <?php get_footer(); ?>
