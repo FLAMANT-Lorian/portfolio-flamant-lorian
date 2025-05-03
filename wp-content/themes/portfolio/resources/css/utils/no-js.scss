@@ -1,0 +1,22 @@
+@import "../settings/variable";
+
+.no-js--message {
+  z-index: 10;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $red;
+  color: $white;
+  padding: 16px 24px;
+
+  a {
+    color: $white;
+    text-decoration: underline;
+  }
+}
+
+.js-enabled .no-js--message {
+  display: none;
+}
