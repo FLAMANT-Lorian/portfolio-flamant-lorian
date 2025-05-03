@@ -1,12 +1,15 @@
 // HELPERS
 @use 'utils/reset';
 @use 'utils/base';
+@use 'utils/no-js';
 
 // SETTINGS
 @use 'settings/variable';
 
 // PAGES
-@use 'pages/home/stage';
+@use 'pages/home';
+@use 'pages/projects';
 
 //COMPONENTS
 @use 'components/line';
+@use 'components/header';
