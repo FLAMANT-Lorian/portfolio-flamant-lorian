@@ -280,3 +280,11 @@ function portfolio_asset(string $file): string
 
     return get_template_directory_uri() . '/public/' . $file;
 }
+
+// Allows import of SVG format
+function my_own_mime_types($mimes)
+{
+    $mimes['svg'] = 'image/svg+xml';
+    return $mimes;
+}
+add_filter('upload_mimes', 'my_own_mime_types');
