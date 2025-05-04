@@ -1,0 +1,107 @@
+@import '../settings/variable';
+
+.contact__form {
+  &--title {
+    padding-bottom: 40px;
+  }
+}
+
+.contact__text {
+  padding-bottom: 96px;
+}
+
+.require__message {
+  padding-bottom: 16px;
+}
+
+fieldset {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+
+  .required {
+    color: $red;
+  }
+
+  input, textarea {
+    color: $black;
+    font-family: $inter;
+    background-color: $light-grey-hover;
+    border: 1px solid $grey;
+    padding: 16px 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 20px;
+
+    &::placeholder {
+      opacity: .8;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &:focus {
+      outline: $grey;
+    }
+  }
+
+  label {
+    text-transform: none;
+    padding-bottom: 8px;
+  }
+}
+
+.submit__btn {
+  background-color: $red;
+  color: $white;
+  font-family: $inter;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 34px;
+  letter-spacing: -0.003em;
+  width: 100%;
+  padding: 16px 10px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  margin-top: 32px;
+  transition: all .3s ease-in-out;
+
+  svg {
+    transition: all .3s ease-in-out;
+    fill: $white;
+  }
+
+  &:hover, &:active {
+    color: $grey;
+    background-color: $light-grey-hover;
+    border: 1px solid $red;
+
+    svg {
+      transform: rotate(45deg);
+      fill: $grey;
+    }
+  }
+}
+
+.error {
+  padding-top: 8px;
+  color: $red;
+}
+
+.success__message {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}

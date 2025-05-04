@@ -1,0 +1,19 @@
+.language {
+  &--title {
+    padding-bottom: 32px;
+  }
+}
+
+.language__gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  row-gap: 32px;
+
+  .single__language--image {
+    max-width: 80px;
+    max-height: 80px;
+    object-fit: contain;
+  }
+
+}

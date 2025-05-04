@@ -20,7 +20,7 @@ class ContactForm
             message: self::generateEmailContent($data),
         );
 
-        $_SESSION['contact_form_success'] = 'Merci, ' . $data['firstname'] . '! Votre message a bien été envoyé.';
+        $_SESSION['contact_form_success'] = 'Merci, ' . $data['first_name'] . '! Votre message a bien été envoyé.';
         wp_safe_redirect($_SERVER['HTTP_REFERER']);
         exit();
     }

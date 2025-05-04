@@ -10,10 +10,13 @@
 @use 'pages/home';
 @use 'pages/projects';
 @use 'pages/about';
+@use 'pages/contact';
 
 //COMPONENTS
 @use 'components/line';
 @use 'components/header';
+@use 'components/footer';
 @use 'components/text-media';
 @use 'components/school-steps';
 @use 'components/engagements';
+@use 'components/languages';

@@ -9,6 +9,7 @@ body {
 
 main {
   padding: 72px 20px;
+  box-sizing: border-box;
 
   @media (min-width: $min-tablet) and (max-width: $mixed-tablet) {
     padding: 96px 32px;
@@ -47,7 +48,7 @@ main {
 
 // TYPOGRAPHIE
 
-h1, h2, h3, h4, h5 {
+h1, h2, h3, h4, h5, label {
   color: $black;
   font-family: $inter;
   text-transform: uppercase;
@@ -88,7 +89,7 @@ h2 {
   }
 }
 
-h3 {
+h3, label {
   font-size: 24px;
   font-weight: 700;
   line-height: 32px;
@@ -182,10 +183,4 @@ a {
   &:hover:after {
     transform: rotate(45deg);
   }
-}
-
-// TMP
-
-footer {
-  display: none;
 }
