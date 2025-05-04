@@ -3,15 +3,15 @@
 .school__steps {
   margin-bottom: 96px;
 
-  @media (min-width: $tablet) {
+  @media (min-width: $min-tablet) {
     margin-bottom: 144px;
   }
 
   &--title {
     padding-bottom: 32px;
 
-    @media (min-width: $tablet) {
-      padding-bottom: 40px;
+    @media (min-width: $min-tablet) {
+      pad-bottom: 40px;
     }
   }
 }
@@ -24,7 +24,7 @@
   padding-bottom: 24px;
 
 
-  @media (min-width: $tablet) {
+  @media (min-width: $min-tablet) {
     padding-bottom: 0;
   }
 
@@ -51,7 +51,7 @@
   border-bottom: 1px solid $red;
 }
 
-@media (min-width: $tablet) {
+@media (min-width: $min-tablet) {
   .school__steps__container {
     display: grid;
     grid-template-columns: repeat(3, 335px);
@@ -75,7 +75,7 @@
   display: none;
 }
 
-@media (min-width: $tablet) {
+@media (min-width: $min-tablet) {
   .slider__btn {
     padding-top: 72px;
     display: flex;
