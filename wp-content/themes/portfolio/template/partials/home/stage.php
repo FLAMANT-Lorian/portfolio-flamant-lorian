@@ -12,7 +12,7 @@
             <?= get_field('job-description', format_value: false); ?>
         </p>
     </div>
-    <?= responsive_image(get_field('profile-picture'), ['loading' => 'lazy', 'classes' => 'home--picture']); ?>
+    <?= responsive_image(get_field('profile-picture'), ['loading' => 'eager', 'classes' => 'home--picture']); ?>
     <div class="btn__container">
         <a href="<?= get_field('high-link')['url']; ?>"
            title="Aller sur la page : À propos"

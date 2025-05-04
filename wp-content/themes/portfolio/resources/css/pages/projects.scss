@@ -1,13 +1,16 @@
 @import '../settings/variable';
-
 .project {
 
   &--title {
-    margin-bottom: 40px;
+    margin-bottom: 16px;
   }
 
   &--text {
     margin-bottom: 40px;
+
+    @media (min-width: $min-tablet) and (max-width: $max-tablet) {
+      margin-bottom: 72px;
+    }
   }
 }
 
@@ -15,7 +18,17 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px 16px;
-  margin-bottom: 96px;
+  margin-bottom: 40px;
+
+  @media (min-width: $min-tablet) {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    margin-bottom: 72px;
+  }
+  @media (min-width: $mixed-tablet) {
+    justify-content: end;
+  }
 
   .filter {
     border: 1px solid $grey;
@@ -25,7 +38,7 @@
     letter-spacing: 0.003em;
     text-align: center;
     text-transform: uppercase;
-    padding: 16px 10px;
+    padding: 10px 16px;
     border-radius: 8px;
 
     &.active, &:hover, &:active {

@@ -5,12 +5,39 @@
   flex-direction: column;
   gap: 32px;
   margin-bottom: 96px;
+
+  @media (min-width: $tablet) {
+    gap: 72px;
+  }
 }
 
 .info__container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 32px;
+
+  @media (min-width: $tablet) {
+    grid-template-areas:  "title ."
+                          "text link";
+    grid-template-columns: 1fr 1fr;
+    row-gap: 40px;
+
+    .engagements {
+      &--title {
+        grid-area: title;
+      }
+
+      &--text {
+        grid-area: text;
+      }
+    }
+
+    .btn__container {
+      align-self: end;
+      justify-self: end;
+      grid-area: link;
+    }
+  }
 
   .arrow__link {
     margin: 0;
@@ -21,6 +48,10 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
+
+  @media (min-width: $tablet) {
+    grid-template-columns: 335px 335px;
+  }
 }
 
 .simple__engagement {

@@ -2,8 +2,17 @@
 
 .school__steps {
   margin-bottom: 96px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 144px;
+  }
+
   &--title {
     padding-bottom: 32px;
+
+    @media (min-width: $tablet) {
+      padding-bottom: 40px;
+    }
   }
 }
 
@@ -13,6 +22,11 @@
   gap: 16px;
   text-align: center;
   padding-bottom: 24px;
+
+
+  @media (min-width: $tablet) {
+    padding-bottom: 0;
+  }
 
   &--date {
     font-family: $inter;
@@ -32,6 +46,59 @@
 .single__step:not(:first-of-type) {
   padding-top: 24px;
 }
+
 .single__step:not(:last-of-type) {
   border-bottom: 1px solid $red;
+}
+
+@media (min-width: $tablet) {
+  .school__steps__container {
+    display: grid;
+    grid-template-columns: repeat(3, 335px);
+    gap: 64px;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .single__step:not(:first-of-type) {
+    padding-top: 0;
+  }
+  .single__step:not(:last-of-type) {
+    border-bottom: none;
+  }
+}
+
+.slider__btn {
+  display: none;
+}
+
+@media (min-width: $tablet) {
+  .slider__btn {
+    padding-top: 72px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+
+    .btn {
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+      border: 1px solid $red;
+      background-color: $light-grey-hover;
+
+      &:hover, &:active {
+        background-color: $red;
+      }
+
+      &--active {
+        border-radius: 10px;
+        width: 40px;
+        background-color: $red;
+      }
+    }
+  }
 }

@@ -3,13 +3,14 @@ $black: #100C08;
 $grey: #5B5959;
 $white: #FBFCFA;
 $red: #F75B5B;
-$red-line: rgba(247, 91, 91, .20);
+$red-line: rgba(247, 91, 91, .15);
 
 $light-grey-hover: #EFEFEF;
 
 // MEDIA QUERIES
 
 $min-tablet: 680px;
+$tablet: 834px;
 $mixed-tablet: 1350px;
 $max-tablet: 1710px;
 
@@ -22,6 +23,7 @@ $inter: 'Inter', 'Helvetica Neue', Arial, sans-serif;
 @font-face {
   font-family: 'Montserrat';
   src: url("../font/Montserrat-Regular.ttf");
+  font-display: swap;
 }
 
 
@@ -29,4 +31,5 @@ $inter: 'Inter', 'Helvetica Neue', Arial, sans-serif;
   font-family: 'Inter';
   src: url("../font/Inter-VariableFont_opsz,wght.ttf");
   font-weight: 100 900;
+  font-display: swap;
 }

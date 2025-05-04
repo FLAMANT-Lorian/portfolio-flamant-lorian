@@ -1,0 +1,31 @@
+@import '../settings/variable';
+
+.text__media {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 32px;
+  margin-bottom: 96px;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 144px;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 88px;
+
+    &--left {
+      .text__media--info {
+        order: -1;
+      }
+    }
+
+    &--right {
+      .text__media--info {
+        order: 1;
+      }
+    }
+  }
+
+  &--image {
+    max-height: 280px;
+  }
+}

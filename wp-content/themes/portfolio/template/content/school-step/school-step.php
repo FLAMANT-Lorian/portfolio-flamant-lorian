@@ -27,4 +27,9 @@ $school_steps = get_sub_field('school-step');
         <?php endforeach; ?>
 
     </div>
+    <div class="slider__btn">
+        <div class="btn btn"></div>
+        <div class="btn btn--active"></div>
+        <div class="btn btn"></div>
+    </div>
 </section>
