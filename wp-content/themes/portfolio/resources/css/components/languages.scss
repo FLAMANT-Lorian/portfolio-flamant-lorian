@@ -5,6 +5,14 @@
 
   &--title {
     padding-bottom: 32px;
+
+    @media (min-width: $tablet) {
+      padding-bottom: 40px;
+    }
+
+    @media (min-width: $desktop) {
+      padding-bottom: 48px;
+    }
   }
 }
 
