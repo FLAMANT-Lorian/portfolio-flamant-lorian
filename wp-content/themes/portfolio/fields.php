@@ -1517,8 +1517,8 @@ add_action( 'acf/include_fields', function() {
                 'sub_fields' => array(
                     array(
                         'key' => 'field_681728e8f729f',
-                        'label' => 'Lien vers mon site',
-                        'name' => 'site-link',
+                        'label' => 'Lien vers le site du développeur',
+                        'name' => 'developer-site-link',
                         'aria-label' => '',
                         'type' => 'link',
                         'instructions' => '',
@@ -1572,3 +1572,4 @@ add_action( 'acf/include_fields', function() {
         'show_in_rest' => 0,
     ) );
 } );
+

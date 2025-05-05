@@ -29,6 +29,10 @@
     margin-bottom: 72px;
   }
 
+  @media (min-width: $desktop) {
+    justify-content: end;
+  }
+
   .filter {
     border: 1px solid $grey;
     color: $grey;

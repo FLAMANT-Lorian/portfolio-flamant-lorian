@@ -18,3 +18,9 @@
     }
   }
 }
+
+@media (min-width: $tablet) {
+  .lines {
+    padding: 0 285px;
+  }
+}

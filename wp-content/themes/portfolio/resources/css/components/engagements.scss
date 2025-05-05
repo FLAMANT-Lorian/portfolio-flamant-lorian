@@ -10,6 +10,11 @@
     margin-bottom: 144px;
     gap: 72px;
   }
+
+  @media (min-width: $tablet) {
+    grid-template-columns: 1fr 1fr;
+    gap: 144px;
+  }
 }
 
 .info__container {
@@ -37,6 +42,16 @@
       align-self: end;
       justify-self: end;
       grid-area: link;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .btn__container{
+      align-self: start;
     }
   }
 
