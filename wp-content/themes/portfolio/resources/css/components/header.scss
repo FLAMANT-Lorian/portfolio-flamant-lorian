@@ -29,7 +29,7 @@
   padding: 72px;
   text-align: center;
   box-sizing: border-box;
-  transition: all .3s ease-in-out;
+  transition: left .3s ease;
 }
 
 .bgm--checkbox:not(:checked) ~ .nav__container {
@@ -39,6 +39,7 @@
 .bgm--checkbox:checked ~ .nav__container {
   left: 0;
 }
+
 .bgm {
   &--checkbox {
     display: none;
@@ -99,7 +100,7 @@
       color: $red;
     }
 
-    &.active{
+    &.active {
       color: $red;
     }
   }

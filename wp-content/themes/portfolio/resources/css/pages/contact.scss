@@ -1,4 +1,5 @@
 @import '../settings/variable';
+
 .contact__form {
   &--title {
     padding-bottom: 16px;
@@ -7,6 +8,7 @@
 
 .contact__text {
   padding-bottom: 96px;
+  max-width: 592px;
 }
 
 .require__message {
@@ -17,6 +19,31 @@ fieldset {
   display: grid;
   grid-template-columns: 1fr;
   gap: 32px;
+
+  @media (min-width: $tablet) {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 32px;
+    column-gap: 24px;
+    grid-template-areas:  "lastname firstname"
+                          "email    email"
+                          "subject  subject";
+
+    .lastname{
+      grid-area: lastname;
+    }
+
+    .firstname{
+      grid-area: firstname;
+    }
+
+    .email{
+      grid-area: email;
+    }
+
+    .message{
+      grid-area: subject;
+    }
+  }
 }
 
 .field {

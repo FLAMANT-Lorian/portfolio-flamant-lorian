@@ -1,21 +1,35 @@
 @import '../settings/variable';
 
 .language {
+  overflow: hidden;
+
   &--title {
     padding-bottom: 32px;
   }
 }
 
 .language__gallery {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;
-  row-gap: 32px;
+  animation: scroll 8s linear infinite;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
 
   .single__language--image {
     max-width: 80px;
-    max-height: 80px;
-    object-fit: contain;
+    padding: 0 30px;
+    height: auto;
+
+
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
   }
 
+  100% {
+    transform: translateX(-840px);
+
+  }
 }

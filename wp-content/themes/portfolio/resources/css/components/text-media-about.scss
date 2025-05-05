@@ -10,7 +10,7 @@
     margin-bottom: 144px;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 88px;
+    gap: 112px;
 
     &--left {
       .text__media--info {
@@ -23,9 +23,5 @@
         order: 1;
       }
     }
-  }
-
-  &--image {
-    max-height: 280px;
   }
 }

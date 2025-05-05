@@ -48,13 +48,15 @@
     </div>
     <div class="projects__container">
 
-        <?php if ($query->have_posts()): while ($query->have_posts()): $query->the_post(); ?>
+        <?php if ($query->have_posts()): while ($query->have_posts()): $query->the_post();
+            $image = get_field('stage')['card-image'];
+            ?>
 
             <article class="single__project">
                 <h3 class="single__project--title">
                     <?= get_the_title(); ?>
                 </h3>
-                <?= responsive_image('', ['loading' => "eager", 'classes' => 'single__project--image']); ?>
+                <?= responsive_image($image, ['loading' => "eager", 'classes' => 'single__project--image']); ?>
                 <a href="<?= get_the_permalink(); ?>"
                    class="single__project--link"
                    title="Découvrir le projet">
@@ -65,8 +67,10 @@
         <?php endwhile; else : ?>
             <p>La page est vide !</p>
         <?php endif; ?>
-
     </div>
+    <p class="end__project">
+        Revenez bientôt pour découvrir d’autres projets !
+    </p>
 </section>
 
 <?php get_footer(); ?>

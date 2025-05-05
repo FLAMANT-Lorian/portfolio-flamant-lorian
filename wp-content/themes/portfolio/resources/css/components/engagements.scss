@@ -1,12 +1,13 @@
 @import '../settings/variable';
 
-.engagements {
-  display: flex;
-  flex-direction: column;
+.commitments {
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 32px;
   margin-bottom: 96px;
 
   @media (min-width: $tablet) {
+    margin-bottom: 144px;
     gap: 72px;
   }
 }
@@ -19,10 +20,10 @@
   @media (min-width: $tablet) {
     grid-template-areas:  "title ."
                           "text link";
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 417px 1fr;
     row-gap: 40px;
 
-    .engagements {
+    .commitments {
       &--title {
         grid-area: title;
       }
@@ -44,17 +45,17 @@
   }
 }
 
-.engagements__container {
+.commitments__container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
 
   @media (min-width: $tablet) {
-    grid-template-columns: 335px 335px;
+    grid-template-columns: repeat(2, 335px);
   }
 }
 
-.simple__engagement {
+.simple__commitment {
   position: relative;
   padding: 24px;
 

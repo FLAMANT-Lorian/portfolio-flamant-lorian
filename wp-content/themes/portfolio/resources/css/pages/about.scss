@@ -1,27 +1,21 @@
 @import '../settings/variable';
 //STAGE
 .about {
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 
-  @media (min-width: $min-tablet) {
-    margin-bottom: 0;
+  @media (min-width: $tablet) {
+    margin-bottom: 72px;
   }
 
   &--title {
-    padding-bottom: 8px;
-    max-width: 500px;
-    @media (min-width: $min-tablet) {
-      max-width: 700px;
-    }
+    padding-bottom: 40px;
 
-    @media (min-width: $mixed-tablet) {
-      max-width: 1100px;
+    @media (min-width: $tablet) {
+      margin-bottom: 72px;
     }
   }
 
   &--link {
-    @media (min-width: $min-tablet) {
-      margin-bottom: 72px;
-    }
+
   }
 }

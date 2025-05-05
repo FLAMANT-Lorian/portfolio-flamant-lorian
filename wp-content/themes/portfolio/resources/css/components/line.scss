@@ -1,6 +1,6 @@
 @import '../settings/variable';
 
-@media (min-width: $min-tablet) {
+@media (min-width: $tablet) {
   .lines {
     box-sizing: border-box;
     padding: 0 136px;
@@ -10,10 +10,6 @@
     justify-content: space-between;
     height: calc(100% - 64px);
     width: 100%;
-
-    @media (min-width: $mixed-tablet) {
-      padding: 0 298px;
-    }
 
     .line {
       height: calc(100% - 64px);

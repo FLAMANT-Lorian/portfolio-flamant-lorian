@@ -1,4 +1,5 @@
 @import '../settings/variable';
+
 .footer {
   background-color: $red;
   padding: 72px 20px;
@@ -8,6 +9,10 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 72px;
+
+  @media (min-width: $tablet) {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .footer__nav {
