@@ -9,17 +9,23 @@
     display: flex;
     justify-content: space-between;
     height: calc(100% - 64px);
+    margin-top: -64px;
     width: 100%;
+    max-width: 2000px;
 
     .line {
-      height: calc(100% - 64px);
       width: 1px;
       background-color: $red-line;
+
+      @media (min-width: $semi-desktop) {
+        margin-top: -77px;
+        height: calc(100% - 77px);
+      }
     }
   }
 }
 
-@media (min-width: $tablet) {
+@media (min-width: $semi-desktop) {
   .lines {
     padding: 0 285px;
   }

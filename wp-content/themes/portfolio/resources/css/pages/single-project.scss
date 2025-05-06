@@ -1,0 +1,26 @@
+.single__stage {
+
+  &--highlink {
+    flex-direction: row-reverse;
+
+    &:after {
+      margin: 0 16px 0 0;
+      transform: rotate(-90deg);
+    }
+
+    &:hover {
+
+      &:after {
+        transform: rotate(-135deg);
+      }
+    }
+  }
+
+  &--title {
+    padding-bottom: 40px;
+  }
+
+  .btn__container {
+    padding-bottom: 40px;
+  }
+}

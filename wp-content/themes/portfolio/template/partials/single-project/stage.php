@@ -1,17 +1,20 @@
-<section>
+<section class="single__stage">
     <?php if (have_rows('stage')): while (have_rows('stage')): the_row(); ?>
-        <a href="<?= get_sub_field('link')['url']; ?>">
-            <?= get_sub_field('link')['title']; ?>
-        </a>
-        <h2>
+        <div class="btn__container">
+            <a href="<?= get_sub_field('link')['url']; ?>"
+               class="arrow__link single__stage--highlink">
+                <?= get_sub_field('link')['title']; ?>
+            </a>
+        </div>
+        <h2 class="single__stage--title">
             <?= get_sub_field('main-title'); ?>
         </h2>
-        <a href="<?= get_sub_field('site-link')['url']; ?>">
-            <?= get_sub_field('site-link')['title']; ?>
-        </a>
-        <p>
-            <?= get_sub_field('project-description', format_value: false); ?>
-        </p>
+        <div class="btn__container">
+            <a href="<?= get_sub_field('site-link')['url']; ?>"
+               class="arrow__link single__stage--sublink">
+                <?= get_sub_field('site-link')['title']; ?>
+            </a>
+        </div>
     <?php
     endwhile;
     endif;
