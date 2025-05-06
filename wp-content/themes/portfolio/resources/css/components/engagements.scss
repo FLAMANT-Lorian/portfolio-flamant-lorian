@@ -11,7 +11,7 @@
     gap: 72px;
   }
 
-  @media (min-width: $desktop) {
+  @media (min-width: $commitments) {
     grid-template-columns: 1fr 1fr;
     gap: 144px;
   }
@@ -23,29 +23,30 @@
   gap: 32px;
 
   @media (min-width: $tablet) {
-    grid-template-areas:  "title ."
-                          "text link";
-    grid-template-columns: 417px 1fr;
-    row-gap: 40px;
+    grid-template-columns: repeat(9, 1fr);
+    row-gap: 24px;
 
     .commitments {
       &--title {
-        grid-area: title;
+        grid-row: 1/2;
+        grid-column: 1/6;
       }
 
       &--text {
-        grid-area: text;
+        grid-row: 2/3;
+        grid-column: 1/6;
       }
     }
 
     .btn__container {
       align-self: end;
       justify-self: end;
-      grid-area: link;
+      grid-row: 2/3;
+      grid-column: 6/10;
     }
   }
 
-  @media (min-width: $desktop) {
+  @media (min-width: $commitments) {
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -67,6 +68,10 @@
 
   @media (min-width: $tablet) {
     grid-template-columns: repeat(2, 335px);
+  }
+
+  @media (min-width: $semi-desktop) {
+    justify-self: end;
   }
 }
 

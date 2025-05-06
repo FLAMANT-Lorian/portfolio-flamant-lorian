@@ -12,7 +12,7 @@ endif;
 
     <section class="others__projects">
         <h2>Découvrir d'autres projets</h2>
-        <div class="projects__card__container">
+        <div class="projects__container">
             <?php $projects = new WP_Query([
                 'post_type' => 'project',
                 'order' => 'DESC',

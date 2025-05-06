@@ -5,7 +5,7 @@ $link = get_sub_field('link');
 $engagements = get_sub_field('engagement-card');
 ?>
 
-<section class="commitments">
+<section class="hidden commitments" data-showUp="true">
     <div class="info__container">
         <h3 class="commitments--title">
             <?= $title; ?>
@@ -15,10 +15,10 @@ $engagements = get_sub_field('engagement-card');
             <?= $description; ?>
         </p>
         <div class="btn__container">
-        <a href="<?= $link['url']; ?>"
-           class="arrow__link commitments--link">
-            <?= $link['title']; ?>
-        </a>
+            <a href="<?= $link['url']; ?>"
+               class="arrow__link commitments--link">
+                <?= $link['title']; ?>
+            </a>
         </div>
     </div>
     <div class="commitments__container">

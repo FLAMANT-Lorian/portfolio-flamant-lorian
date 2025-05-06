@@ -1,0 +1,75 @@
+@import "../settings/variable";
+
+.projects__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 40px;
+
+  @media (min-width: $tablet) {
+    grid-template-columns: repeat(9, 1fr);
+    row-gap: 72px;
+    column-gap: 24px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 140px;
+    row-gap: 96px;
+  }
+
+}
+
+.project__card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  transition: all .3s ease-in-out;
+
+
+  @media (min-width: $tablet) {
+    &:nth-of-type(odd) {
+      grid-column: 1/5;
+    }
+
+    &:nth-of-type(even) {
+      grid-column: 6/10;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    &:nth-of-type(odd) {
+      grid-column: 1/2;
+    }
+
+    &:nth-of-type(even) {
+      grid-column: 2/3;
+    }
+  }
+
+
+  @media (min-width: $desktop) {
+    gap: 16px;
+  }
+
+  &:hover {
+    transform-origin: center center;
+    transform: scale(0.95);
+  }
+
+  &--title {
+    @media (min-width: $desktop) {
+      font-size: 30px;
+      line-height: 30px;
+    }
+  }
+
+  &--link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
+}

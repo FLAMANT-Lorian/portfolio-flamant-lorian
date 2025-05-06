@@ -2,7 +2,7 @@
 $title = get_sub_field('main-title');
 $school_steps = get_sub_field('school-step');
 ?>
-<section class="school__steps">
+<section class="hidden school__steps" data-showUp="true">
     <h3 class="school__steps--title">
         <?= $title; ?>
         <span class="last__point">.</span>

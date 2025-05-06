@@ -4,7 +4,7 @@ $text = get_sub_field('about-me', format_value: false);
 $position = get_sub_field('text-position');
 ?>
 
-<section class="text__media text__media--<?= $position ?>">
+<section class="hidden text__media text__media--<?= $position ?>" data-showUp="true">
     <div class="text__media--info">
         <h3 class="sro text__media--title">
             <?= __trans('Description de moi'); ?>

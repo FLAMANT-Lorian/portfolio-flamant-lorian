@@ -4,7 +4,7 @@ $paragraphs = get_sub_field('description');
 $image = get_sub_field('image');
 ?>
 
-<section>
+<section class="hidden" data-showUp="true">
     <div>
         <h3>
             <?= $title; ?>

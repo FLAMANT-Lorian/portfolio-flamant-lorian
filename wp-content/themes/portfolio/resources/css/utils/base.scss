@@ -15,7 +15,7 @@ main {
     padding: 96px 32px;
   }
 
-  @media (min-width: $desktop) {
+  @media (min-width: $semi-desktop) {
     padding: 136px 145px;
   }
 }
@@ -76,6 +76,17 @@ h2 {
     }
   }
 
+  @media (min-width: $semi-desktop) {
+    font-size: 160px;
+    line-height: 198px;
+    letter-spacing: -0.025em;
+    max-width: 1069px;
+
+    .last__point {
+      margin-left: -25px;
+    }
+  }
+
   @media (min-width: $desktop) {
     font-size: 220px;
     line-height: 198px;
@@ -112,7 +123,7 @@ h4 {
   font-size: 24px;
   font-weight: 700;
   line-height: 32px;
-  
+
   @media (min-width: $desktop) {
     font-size: 30px;
     line-height: 30px;
@@ -179,4 +190,27 @@ a {
   &:hover:after {
     transform: rotate(45deg);
   }
+}
+
+// SHOW-UP
+@keyframes showUp {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.showUp {
+  animation: showUp 1s;
+  transition-duration: .5s;
+  opacity: 1;
+
+}
+
+.hidden {
+  opacity: 0;
 }

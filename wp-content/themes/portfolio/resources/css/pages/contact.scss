@@ -6,6 +6,23 @@
   }
 }
 
+@media (min-width: $contact) {
+  .contact__form__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+    padding-top: 96px;
+  }
+
+  .contact__left {
+    grid-column: 1/4;
+  }
+
+  .contact__right {
+    grid-column: 6/13;
+  }
+}
+
 .contact__text {
   padding-bottom: 96px;
   max-width: 592px;
@@ -28,19 +45,19 @@ fieldset {
                           "email    email"
                           "subject  subject";
 
-    .lastname{
+    .lastname {
       grid-area: lastname;
     }
 
-    .firstname{
+    .firstname {
       grid-area: firstname;
     }
 
-    .email{
+    .email {
       grid-area: email;
     }
 
-    .message{
+    .message {
       grid-area: subject;
     }
   }

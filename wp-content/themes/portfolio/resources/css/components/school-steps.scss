@@ -14,7 +14,7 @@
       padding-bottom: 40px;
     }
 
-    @media (min-width: $desktop) {
+    @media (min-width: $school) {
       padding-bottom: 48px;
     }
   }
@@ -36,7 +36,7 @@
     letter-spacing: -0.006em;
     text-transform: uppercase;
 
-    @media (min-width: $desktop) {
+    @media (min-width: $school) {
       font-size: 80px;
       line-height: 80px;
       letter-spacing: -0.003em;
@@ -46,6 +46,11 @@
 
   &--title {
     text-transform: none;
+    padding-bottom: 12px;
+
+    @media (min-width: $school) {
+      padding-bottom: 16px;
+    }
   }
 }
 
@@ -81,14 +86,14 @@
   }
 }
 
-@media (min-width: $desktop) {
+@media (min-width: $school) {
 
   .single__step, .single__step:not(:last-of-type) {
     border-bottom: 1px solid $red;
   }
 }
 
-@media (min-width: $desktop) {
+@media (min-width: $school) {
   .school__steps__container {
     display: flex;
     flex-direction: column;
@@ -183,7 +188,7 @@
   }
 }
 
-@media (min-width: $desktop) {
+@media (min-width: $school) {
   .slider__btn {
     display: none;
   }

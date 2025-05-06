@@ -5,7 +5,7 @@ if (have_posts()): while (have_posts()): the_post(); ?>
 
     <section class="recent__project">
         <h2 class="sro">Mes derniers projets</h2>
-        <div class="projects__card__container">
+        <div class="projects__container">
             <?php $projects = new WP_Query([
                 'post_type' => 'project',
                 'order' => 'DESC',
@@ -17,7 +17,7 @@ if (have_posts()): while (have_posts()): the_post(); ?>
                 $image = get_field('stage')['card-image'];
                 ?>
 
-                <article class="project__card">
+                <article class="showUp--disabled project__card" data-showUp="true">
                     <h3 class="project__card--title">
                         <?= get_the_title(); ?>
                     </h3>
