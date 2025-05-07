@@ -3,7 +3,7 @@ $title = get_sub_field('main-title');
 $logos = get_sub_field('languages-logo');
 ?>
 
-<section class="hidden language" data-showUp="true">
+<section class="language" data-showUp="true">
     <h3 class="language--title">
         <?= $title; ?>
         <span class="last__point">.</span>

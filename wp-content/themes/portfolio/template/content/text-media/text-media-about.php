@@ -4,13 +4,13 @@ $text = get_sub_field('about-me', format_value: false);
 $position = get_sub_field('text-position');
 ?>
 
-<section class="hidden text__media text__media--<?= $position ?>" data-showUp="true">
-    <div class="text__media--info">
-        <h3 class="sro text__media--title">
+<section class="text__media__about text__media__about--<?= $position ?>" data-showUp="true">
+    <div class="text__media__about--info">
+        <h3 class="sro text__media__about--title">
             <?= __trans('Description de moi'); ?>
             <span class="last__point">.</span>
         </h3>
-        <p class="text__media--text">
+        <p class="text__media__about--text">
             <?= $text; ?>
         </p>
     </div>

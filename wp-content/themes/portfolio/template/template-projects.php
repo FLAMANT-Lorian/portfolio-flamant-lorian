@@ -55,7 +55,7 @@
                 $image = get_field('stage')['card-image'];
                 ?>
 
-                <article class="showUp--disabled project__card" data-showUp="true">
+                <article class="project__card" data-showUp="true">
                     <h3 class="project__card--title">
                         <?= get_the_title(); ?>
                     </h3>

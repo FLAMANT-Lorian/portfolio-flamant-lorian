@@ -1,0 +1,43 @@
+@import '../settings/variable';
+
+.text__media__project {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-bottom: 96px;
+
+  @media (min-width: $text-media-project) {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    column-gap: 112px;
+    margin-bottom: 144px;
+
+
+    &--left .text__media__project--information {
+      order: -1;
+    }
+
+    &--right .text__media__project--information {
+      order: 1;
+    }
+  }
+
+  @media (min-width: $semi-desktop) {
+    column-gap: 216px;
+    margin-bottom: 192px;
+
+    &--image{
+      object-fit: cover;
+      width: 100%;
+      max-height: 400px;
+    }
+  }
+
+  &--title {
+    padding-bottom: 16px;
+
+    @media (min-width: $text-media-project) {
+      padding-bottom: 40px;
+    }
+  }
+}

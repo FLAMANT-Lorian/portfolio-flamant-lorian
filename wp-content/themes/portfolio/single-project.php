@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
 <?php include('template/partials/single-project/stage.php');
-
 if (have_rows('content')): while (have_rows('content')): the_row();
     if (get_row_layout() === 'text-media-project'):
         include('template/content/text-media/text-media-project.php');
@@ -11,7 +10,10 @@ endif;
 ?>
 
     <section class="others__projects">
-        <h2>Découvrir d'autres projets</h2>
+        <h2 class="others__projects--title">
+            Découvrir d'autres projets
+            <span class="last__point">.</span>
+        </h2>
         <div class="projects__container">
             <?php $projects = new WP_Query([
                 'post_type' => 'project',

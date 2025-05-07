@@ -1,5 +1,7 @@
 @import '../settings/variable';
+
 .no-js--message {
+  border-top: 1px solid $white;
   z-index: 10;
   text-align: center;
   position: fixed;

@@ -5,7 +5,7 @@ $link = get_sub_field('link');
 $engagements = get_sub_field('engagement-card');
 ?>
 
-<section class="hidden commitments" data-showUp="true">
+<section class="commitments" data-showUp="true">
     <div class="info__container">
         <h3 class="commitments--title">
             <?= $title; ?>
@@ -22,15 +22,17 @@ $engagements = get_sub_field('engagement-card');
         </div>
     </div>
     <div class="commitments__container">
-        <?php foreach ($engagements as $engagement): ?>
-            <article class="simple__commitment">
-                <h4 class="simple__commitment--title">
-                    <?= $engagement['engagement-name']; ?>
-                </h4>
-                <p class="simple__commitment--text">
-                    <?= $engagement['engagement-description']; ?>
-                </p>
-            </article>
-        <?php endforeach; ?>
+        <?php if (have_rows('engagement-card')): ?>
+            <?php while (have_rows('engagement-card')): the_row(); ?>
+                <article class="simple__commitment">
+                    <h4 class="simple__commitment--title">
+                        <?= get_sub_field('engagement-name'); ?>
+                    </h4>
+                    <p class="simple__commitment--text">
+                        <?= get_sub_field('engagement-description', format_value: false); ?>
+                    </p>
+                </article>
+            <?php endwhile; ?>
+        <?php endif; ?>
     </div>
 </section>
