@@ -14,5 +14,5 @@ $position = get_sub_field('text-position');
             <?= $text; ?>
         </p>
     </div>
-    <?= responsive_image($image, ['loading' => 'eager', 'classes' => 'text__media--image']) ?>
+    <?= responsive_image($image, ['loading' => 'eager', 'classes' => 'text__media__about--image']) ?>
 </section>

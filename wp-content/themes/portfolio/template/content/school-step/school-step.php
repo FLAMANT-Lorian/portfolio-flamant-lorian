@@ -9,8 +9,8 @@ $school_steps = get_sub_field('school-step');
     </h3>
     <div class="school__steps__container">
 
-        <?php foreach ($school_steps as $school_step): ?>
-            <article class="single__step">
+        <?php foreach ($school_steps as $index => $school_step): ?>
+            <article class="single__step" id="school__list--<?= $index; ?>">
                 <time datetime="<?= $school_step['year']; ?>"
                       class="single__step--date">
                     <?= $school_step['year']; ?>
@@ -28,8 +28,8 @@ $school_steps = get_sub_field('school-step');
 
     </div>
     <div class="slider__btn">
-        <div class="btn btn"></div>
-        <div class="btn btn--active"></div>
-        <div class="btn btn"></div>
+        <div class="btn" data-target="school__list--0"></div>
+        <div class="btn btn--active" data-target="school__list--1"></div>
+        <div class="btn" data-target="school__list--2"></div>
     </div>
 </section>

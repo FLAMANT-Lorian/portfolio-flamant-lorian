@@ -13,13 +13,13 @@
     gap: 112px;
 
     &--left {
-      .text__media--info {
+      .text__media__about--info {
         order: -1;
       }
     }
 
     &--right {
-      .text__media--info {
+      .text__media__about--info {
         order: 1;
       }
     }

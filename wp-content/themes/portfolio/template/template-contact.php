@@ -11,12 +11,12 @@ the_post(); ?>
     </h2>
     <div class="contact__form__container">
 
-        <article class="contact__left" data-showUp="true">
+        <article class="contact__left">
             <p class="contact__text">
                 <?= get_field('description', format_value: false); ?>
             </p>
         </article>
-        <section class="contact__right" data-showUp="true">
+        <section class="contact__right">
             <p class="require__message">
                 <?= __trans('Les champs renseignées avec  (*)  sont obligatoires !'); ?>
             </p>
