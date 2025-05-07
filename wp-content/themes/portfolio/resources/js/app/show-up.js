@@ -3,6 +3,7 @@
         animateElements: document.querySelectorAll('[data-showUp="true"]'),
 
         init() {
+            this.addHiddenClass();
             this.observers = new IntersectionObserver((entries) => {
                 this.show(entries);
             });
@@ -24,6 +25,11 @@
             });
         },
 
+        addHiddenClass() {
+            this.animateElements.forEach(animateElement => {
+                animateElement.classList.add('hidden');
+            })
+        }
     }
     showUp.init();
 })();
