@@ -1,0 +1,49 @@
+@import "../settings/variable";
+
+.privacy {
+  padding-bottom: 96px;
+
+  &--title {
+    font-size: 100px;
+    line-height: 100px;
+
+    .last__point {
+      margin-left: -16px;
+    }
+  }
+}
+
+.privacy__container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 24px;
+  row-gap: 48px;
+
+  article {
+    grid-column: 3/11;
+
+    h3 {
+      padding-bottom: 16px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    li {
+      color: $black;
+      font-family: $montserrat;
+      font-size: 20px;
+      line-height: 34px;
+      font-weight: 400;
+    }
+
+    a {
+      color: $black;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+  }
+}
