@@ -5,6 +5,52 @@ add_action( 'acf/include_fields', function() {
     }
 
     acf_add_local_field_group( array(
+        'key' => 'group_681c7bd2f30d2',
+        'title' => 'Mentions légales',
+        'fields' => array(
+            array(
+                'key' => 'field_681c7bd3779ef',
+                'label' => 'legal',
+                'name' => 'legal',
+                'aria-label' => '',
+                'type' => 'wysiwyg',
+                'instructions' => '',
+                'required' => 1,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'default_value' => '',
+                'allow_in_bindings' => 0,
+                'tabs' => 'all',
+                'toolbar' => 'full',
+                'media_upload' => 1,
+                'delay' => 0,
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'page_template',
+                    'operator' => '==',
+                    'value' => 'template/template-legal.php',
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'normal',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+        'active' => true,
+        'description' => '',
+        'show_in_rest' => 0,
+    ) );
+
+    acf_add_local_field_group( array(
         'key' => 'group_68067ef0b5113',
         'title' => 'Page à propos',
         'fields' => array(

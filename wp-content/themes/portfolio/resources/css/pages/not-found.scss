@@ -1,0 +1,17 @@
+.not__found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 32px;
+  padding: 32px 0;
+
+  .not__found__btn__container {
+    display: flex;
+  }
+
+  &--link {
+    padding: 10px 32px;
+    margin: 0;
+  }
+}
