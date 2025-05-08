@@ -139,7 +139,7 @@
       }
     }
 
-    &:hover {
+    &:hover, &:active{
       @media (min-width: $semi-desktop) {
         &:after {
           transform: scaleX(1);

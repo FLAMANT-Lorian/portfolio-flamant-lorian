@@ -172,7 +172,7 @@ a {
     transition: bottom .3s ease-out;
   }
 
-  &:hover:before {
+  &:hover:before, &:active:before {
     bottom: -2px;
     width: 100%;
     background-color: $red;
@@ -187,7 +187,7 @@ a {
     margin-left: 16px;
   }
 
-  &:hover:after {
+  &:hover:after, &:active:after {
     transform: rotate(45deg);
   }
 }

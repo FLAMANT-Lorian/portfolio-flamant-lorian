@@ -34,18 +34,13 @@
       grid-column: 7/10;
       grid-row: 3/4;
       text-align: right;
+      align-self: end;
       padding: 0;
     }
   }
 
   @media (min-width: $semi-desktop) {
     margin-bottom: 96px;
-    .btn__container:last-of-type {
-      grid-row: 2/3;
-      align-self: end;
-      text-align: right;
-      padding-bottom: 19px;
-    }
   }
 
   &--highlink {
@@ -56,7 +51,7 @@
       transform: rotate(-90deg);
     }
 
-    &:hover {
+    &:hover, &:active {
 
       &:after {
         transform: rotate(-135deg);

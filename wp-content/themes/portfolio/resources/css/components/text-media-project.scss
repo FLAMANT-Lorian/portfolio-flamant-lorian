@@ -6,6 +6,10 @@
   gap: 32px;
   margin-bottom: 96px;
 
+  &--image{
+    box-shadow: 0 0 20px -3px $black;
+  }
+
   @media (min-width: $text-media-project) {
     grid-template-columns: 1fr 1fr;
     align-items: center;

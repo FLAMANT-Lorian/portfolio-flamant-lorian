@@ -51,7 +51,7 @@
     gap: 16px;
   }
 
-  &:hover, .hover {
+  &:hover, &:active {
     transform-origin: center center;
     transform: scale(0.95);
   }
