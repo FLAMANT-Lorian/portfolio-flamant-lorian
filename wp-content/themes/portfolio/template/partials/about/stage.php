@@ -10,7 +10,8 @@ $stage = get_field('stage');
         </h2>
         <div class="btn__container">
             <a href="<?= $stage['link']['url']; ?>"
-               class="arrow__link about--link">
+               class="arrow__link about--link"
+               title="<?= __trans('Aller vers la page : Projets'); ?>">
                 <?= $stage['link']['title']; ?>
             </a>
         </div>

@@ -16,7 +16,8 @@ $engagements = get_sub_field('engagement-card');
         </p>
         <div class="btn__container">
             <a href="<?= $link['url']; ?>"
-               class="arrow__link commitments--link">
+               class="arrow__link commitments--link"
+               title="<?= __trans('Aller vers la page : Contact'); ?>">
                 <?= $link['title']; ?>
             </a>
         </div>

@@ -5,7 +5,7 @@
 <?php include('partials/project/stage.php'); ?>
 
 <section>
-    <h2 class="sro">L'ensemble de mes projets</h2>
+    <h2 class="sro"><?= __trans('L’ensemble de mes projets'); ?></h2>
     <?php
     $taxonomy = isset($_GET['filter']) ? sanitize_text_field($_GET['filter']) : '';
     $args = [
@@ -34,7 +34,7 @@
     $current_filter = isset($_GET['filter']) ? sanitize_text_field($_GET['filter']) : '';
     ?>
     <section class="filter__container">
-        <h3 class="sro">Filtres</h3>
+        <h3 class="sro"><?= __trans('Filtres'); ?></h3>
         <a href="<?= esc_url(get_permalink()); ?>"
            class="filter <?= ($current_filter === '') ? 'active' : ''; ?>">
             Tout
@@ -48,7 +48,7 @@
         <?php endforeach; ?>
     </section>
     <section class="projects__archive">
-        <h3 class="sro">Mes projets</h3>
+        <h3 class="sro"><?= __trans('Mes projets'); ?></h3>
         <div class="projects__container">
 
             <?php if ($query->have_posts()): while ($query->have_posts()): $query->the_post();
@@ -62,18 +62,16 @@
                     <?= responsive_image($image, ['loading' => "eager", 'classes' => 'project__card--image']); ?>
                     <a href="<?= get_the_permalink(); ?>"
                        class="project__card--link"
-                       title="Découvrir le projet">
-                        <span class="sro">Découvrir le projet :<?= get_the_title(); ?></span>
+                       title="<?= __trans('Découvrir le projet '); ?>&nbsp;: <?= get_the_title(); ?>">
+                        <span class="sro"><?= __trans('Découvrir le projet '); ?>&nbsp;: <?= get_the_title(); ?></span>
                     </a>
                 </article>
 
-            <?php endwhile; else : ?>
-                <p>La page est vide !</p>
-            <?php endif; ?>
+            <?php endwhile; endif; ?>
         </div>
     </section>
     <p class="end__project">
-        Revenez bientôt pour découvrir d’autres projets !
+        <?= __trans('Revenez bientôt pour découvrir d’autres projets'); ?>&nbsp;!
     </p>
 </section>
 

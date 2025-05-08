@@ -15,7 +15,7 @@
     <?= responsive_image(get_field('profile-picture'), ['loading' => 'eager', 'classes' => 'home--picture']); ?>
     <div class="btn__container">
         <a href="<?= get_field('high-link')['url']; ?>"
-           title="Aller sur la page : À propos"
+           title="<?= __trans('Aller sur la page : À propos');?>"
            class="home--link arrow__link">
             <?= get_field('high-link')['title']; ?>
         </a>

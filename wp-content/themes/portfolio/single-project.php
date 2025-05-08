@@ -11,7 +11,7 @@ endif;
 
     <section class="others__projects">
         <h2 class="others__projects--title">
-            Découvrir d'autres projets
+            <?= __trans('Découvrir d’autres projets'); ?>
             <span class="last__point">.</span>
         </h2>
         <div class="projects__container">
@@ -34,14 +34,11 @@ endif;
                     <?= responsive_image($image, ['loading' => 'eager', 'classes' => 'project__card--image']) ?>
                     <a href="<?= get_the_permalink(); ?>"
                        class="project__card--link"
-                       title="Découvrir le projet">
-                        <span class="sro">Découvrir le projet : <?= get_the_title(); ?></span>
+                       title="<?= __trans('Découvrir le projet'); ?>&nbsp;: <?= get_the_title(); ?>">
+                        <span class="sro"><?= __trans('Découvrir le projet'); ?>&nbsp;: <?= get_the_title(); ?></span>
                     </a>
                 </article>
-
-            <?php endwhile; else: ?>
-                <p>Il n'y a aucun projets à voir pour le moment</p>
-            <?php endif; ?>
+            <?php endwhile; endif; ?>
             <?php wp_reset_postdata(); ?>
         </div>
     </section>

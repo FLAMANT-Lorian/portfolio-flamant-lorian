@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2025-04-24 21:46+0200\n"
-"PO-Revision-Date: 2025-04-24 21:46+0200\n"
+"POT-Creation-Date: 2025-05-08 15:47+0200\n"
+"PO-Revision-Date: 2025-05-08 15:48+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_GB\n"
@@ -14,10 +14,179 @@ msgstr ""
 "X-Poedit-KeywordsList: __trans\n"
 "X-Poedit-SearchPath-0: .\n"
 
+#: 404.php:9
+msgid "Page non trouvée"
+msgstr "Page not found"
+
+#: 404.php:12
+msgid "Il n’y a rien à voir par ici"
+msgstr "There’s nothing to see here"
+
+#: 404.php:17
+msgid "Retourner à l’accueil"
+msgstr "Back to home page"
+
+#: footer.php:7
+msgid "Navigation"
+msgstr "Navigation"
+
+#: footer.php:13 header.php:50
+msgid "Aller sur la page : "
+msgstr "Go to page : "
+
+#: footer.php:22
+msgid "Retrouvez-moi"
+msgstr "Follow me"
+
+#: footer.php:35
+msgid "Voir ma page"
+msgstr "See my"
+
+#: footer.php:47
+msgid "Ressources"
+msgstr "Resources"
+
+#: footer.php:61
+msgid "Visiter le site de"
+msgstr "Visit the website of"
+
+#: footer.php:77
+msgid "©2025 FLAMANT LORIAN. Tous droits réservés"
+msgstr "©2025 FLAMANT LORIAN. All rights reserved"
+
+#: footer.php:81
+msgid "Aller vers la page : Mentions légales"
+msgstr "Go to page : Legal information"
+
+#: footer.php:82 template/template-legal.php:7
+msgid "Mentions légales"
+msgstr "Legal information"
+
+#: front-page.php:7
+msgid "Mes derniers projets"
+msgstr "My latest projects"
+
+#: front-page.php:27 template/template-projects.php:65
+#: template/template-projects.php:66
+msgid "Découvrir le projet "
+msgstr "Discover the project "
+
+#: front-page.php:28 single-project.php:37 single-project.php:38
+msgid "Découvrir le projet"
+msgstr "Discover the project"
+
+#: front-page.php:37
+msgid "Aller sur la page : Mes projets"
+msgstr "Go to page : My projects"
+
 #: header.php:2
 msgid "fr"
 msgstr "en"
 
-#: header.php:14
+#: header.php:6 header.php:21
 msgid "Portfolio de Lorian Flamant"
 msgstr "Lorian Flamant’s portfolio"
+
+#: header.php:15
+msgid ""
+"Pour accéder à toutes les fonctionnalités de ce site, vous devez activer "
+"JavaScript."
+msgstr ""
+"To access all the functions of this site, you need to activate JavaScript."
+
+#: header.php:16
+msgid "Voici les"
+msgstr "Here are the"
+
+#: header.php:17
+msgid "instructions pour activer JavaScript dans votre navigateur Web"
+msgstr "instructions for activating JavaScript in your web browser"
+
+#: header.php:24
+msgid "Aller directement au contenu principal de la page"
+msgstr "Go directly to the main content of the page"
+
+#: header.php:25
+msgid "Aller vers le contenu de la page"
+msgstr "Go to page content"
+
+#: header.php:39
+msgid "Navigation principale"
+msgstr "Main navigation"
+
+#: single-project.php:14
+msgid "Découvrir d’autres projets"
+msgstr "Discover other projects"
+
+#: template/content/engagement/engagement.php:20
+msgid "Aller vers la page : Contact"
+msgstr "Go to page : Contact"
+
+#: template/content/text-media/text-media-about.php:10
+msgid "Description de moi"
+msgstr "Description of me"
+
+#: template/partials/about/stage.php:14
+#: template/partials/single-project/stage.php:6
+msgid "Aller vers la page : Projets"
+msgstr "Go to page :Projects"
+
+#: template/partials/form/form.php:4
+msgid "Nom"
+msgstr "Last name"
+
+#: template/partials/form/form.php:16
+msgid "Prénom"
+msgstr "First name"
+
+#: template/partials/form/form.php:28
+msgid "Adresse mail"
+msgstr "E-mail address"
+
+#: template/partials/form/form.php:40
+msgid "Message"
+msgstr "Message"
+
+#: template/partials/form/form.php:42
+msgid "Je vous contacte pour..."
+msgstr "I’m contacting you to…"
+
+#: template/partials/form/form.php:54
+msgid "Envoyer"
+msgstr "Send"
+
+#: template/partials/home/stage.php:18
+msgid "Aller sur la page : À propos"
+msgstr "Go to page : Projects"
+
+#: template/partials/single-project/stage.php:16
+msgid "Voir le projet"
+msgstr "Discover the project"
+
+#: template/template-contact.php:21
+msgid "Les champs renseignées avec  (*)  sont obligatoires !"
+msgstr "Fields marked with (*) are required !"
+
+#: template/template-legal.php:12
+msgid "Mis à jour le"
+msgstr "Updated on"
+
+#: template/template-legal.php:17
+msgid "Contenu"
+msgstr "Content"
+
+#: template/template-projects.php:8
+msgid "L’ensemble de mes projets"
+msgstr "All my projects"
+
+#: template/template-projects.php:37
+msgid "Filtres"
+msgstr "Filters"
+
+#: template/template-projects.php:51
+msgid "Mes projets"
+msgstr "My projects"
+
+#: template/template-projects.php:74
+msgid "Revenez bientôt pour découvrir d’autres projets"
+msgstr "Come back soon to discover other projects"

@@ -4,7 +4,7 @@
         <h2 class="sro">Footer</h2>
         <nav class="footer__nav secondary__nav">
             <h3 class="footer__nav--title secondary__nav--title">
-                Navigation
+                <?= __trans('Navigation'); ?>
             </h3>
             <ul class="footer__nav--list secondary__nav--list">
                 <?php foreach (dw_get_navigation_links('footer') as $link): ?>
@@ -19,7 +19,7 @@
         </nav>
         <aside class="footer__nav social__link">
             <h3 class="footer__nav--title">
-                Retrouvez-moi
+                <?= __trans('Retrouvez-moi'); ?>
             </h3>
             <ul class="footer__nav--list">
                 <?php if (have_rows('social-networks', 'option')):
@@ -31,7 +31,9 @@
 
                         <li class="footer__nav--item social__network--<?= $social_network_type; ?>">
                             <a href="<?= $social_network_link['url']; ?>"
-                               class="nav__link"><?= $social_network_link['title']; ?></a>
+                               class="nav__link"
+                               title="<?= __trans('Voir ma page'); ?>&nbsp;: <?= $social_network_type; ?>">
+                                <?= $social_network_link['title']; ?></a>
                         </li>
 
                     <?php
@@ -42,7 +44,7 @@
         </aside>
         <aside class="footer__nav resources">
             <h3 class="footer__nav--title">
-                Ressources
+                <?= __trans('Ressources'); ?>
             </h3>
             <ul class="footer__nav--list ">
 
@@ -55,7 +57,8 @@
 
                         <li class="footer__nav--item resource--<?= $resource_type; ?>">
                             <a href="<?= $resource_link['url']; ?>"
-                               class="nav__link"><?= $resource_link['title']; ?></a>
+                               class="nav__link"
+                               title="<?= __trans('Visiter le site de'); ?>&nbsp;: <?= $resource_link['title']; ?>"><?= $resource_link['title']; ?></a>
                         </li>
 
                     <?php
@@ -71,11 +74,12 @@
         $legal = $footer['legal-notices'];
         ?>
         <p>
-            ©2025 FLAMANT LORIAN. Tous droits réservés
+            <?= __trans('©2025 FLAMANT LORIAN. Tous droits réservés'); ?>
         </p>
         <a href="<?= $legal['url']; ?>"
-           class="legal-notices">
-            <?= $legal['title']; ?>
+           class="legal-notices"
+           title="<?= __trans('Aller vers la page : Mentions légales'); ?>">
+            <?= __trans('Mentions légales') ?>
         </a>
     </div>
 </footer>

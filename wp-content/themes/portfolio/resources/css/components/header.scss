@@ -1,6 +1,17 @@
 @import '../settings/variable';
 // BURGER MENU
 
+.logo {
+  display: flex;
+  .fill {
+    fill: $white;
+
+    @media (min-width: $semi-desktop) {
+      fill: $red;
+    }
+  }
+}
+
 .header {
   position: relative;
   max-width: 100%;

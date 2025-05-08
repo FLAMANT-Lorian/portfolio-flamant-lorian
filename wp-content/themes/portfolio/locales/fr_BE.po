@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2025-04-24 21:45+0200\n"
-"PO-Revision-Date: 2025-04-24 21:45+0200\n"
+"POT-Creation-Date: 2025-05-08 15:48+0200\n"
+"PO-Revision-Date: 2025-05-08 15:48+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_BE\n"
@@ -14,10 +14,180 @@ msgstr ""
 "X-Poedit-KeywordsList: __trans\n"
 "X-Poedit-SearchPath-0: .\n"
 
+#: 404.php:9
+msgid "Page non trouvée"
+msgstr "Page non trouvée"
+
+#: 404.php:12
+msgid "Il n’y a rien à voir par ici"
+msgstr "Il n’y a rien à voir par ici"
+
+#: 404.php:17
+msgid "Retourner à l’accueil"
+msgstr "Retourner à l’accueil"
+
+#: footer.php:7
+msgid "Navigation"
+msgstr "Navigation"
+
+#: footer.php:13 header.php:50
+msgid "Aller sur la page : "
+msgstr "Aller sur la page : "
+
+#: footer.php:22
+msgid "Retrouvez-moi"
+msgstr "Retrouvez-moi"
+
+#: footer.php:35
+msgid "Voir ma page"
+msgstr "Voir ma page"
+
+#: footer.php:47
+msgid "Ressources"
+msgstr "Ressources"
+
+#: footer.php:61
+msgid "Visiter le site de"
+msgstr ""
+
+#: footer.php:77
+msgid "©2025 FLAMANT LORIAN. Tous droits réservés"
+msgstr "©2025 FLAMANT LORIAN. Tous droits réservés"
+
+#: footer.php:81
+msgid "Aller vers la page : Mentions légales"
+msgstr "Aller vers la page : Mentions légales"
+
+#: footer.php:82 template/template-legal.php:7
+msgid "Mentions légales"
+msgstr "Mentions légales"
+
+#: front-page.php:7
+msgid "Mes derniers projets"
+msgstr "Mes derniers projets"
+
+#: front-page.php:27 template/template-projects.php:65
+#: template/template-projects.php:66
+msgid "Découvrir le projet "
+msgstr "Découvrir le projet "
+
+#: front-page.php:28 single-project.php:37 single-project.php:38
+msgid "Découvrir le projet"
+msgstr "Découvrir le projet"
+
+#: front-page.php:37
+msgid "Aller sur la page : Mes projets"
+msgstr "Aller sur la page : Mes projets"
+
 #: header.php:2
 msgid "fr"
 msgstr "fr"
 
-#: header.php:14
+#: header.php:6 header.php:21
 msgid "Portfolio de Lorian Flamant"
 msgstr "Portfolio de Lorian Flamant"
+
+#: header.php:15
+msgid ""
+"Pour accéder à toutes les fonctionnalités de ce site, vous devez activer "
+"JavaScript."
+msgstr ""
+"Pour accéder à toutes les fonctionnalités de ce site, vous devez activer "
+"JavaScript."
+
+#: header.php:16
+msgid "Voici les"
+msgstr "Voici les"
+
+#: header.php:17
+msgid "instructions pour activer JavaScript dans votre navigateur Web"
+msgstr "instructions pour activer JavaScript dans votre navigateur Web"
+
+#: header.php:24
+msgid "Aller directement au contenu principal de la page"
+msgstr "Aller directement au contenu principal de la page"
+
+#: header.php:25
+msgid "Aller vers le contenu de la page"
+msgstr "Aller vers le contenu de la page"
+
+#: header.php:39
+msgid "Navigation principale"
+msgstr "Navigation principale"
+
+#: single-project.php:14
+msgid "Découvrir d’autres projets"
+msgstr "Découvrir d’autres projets"
+
+#: template/content/engagement/engagement.php:20
+msgid "Aller vers la page : Contact"
+msgstr "Aller vers la page : Contact"
+
+#: template/content/text-media/text-media-about.php:10
+msgid "Description de moi"
+msgstr "Description de moi"
+
+#: template/partials/about/stage.php:14
+#: template/partials/single-project/stage.php:6
+msgid "Aller vers la page : Projets"
+msgstr "Aller vers la page : Projets"
+
+#: template/partials/form/form.php:4
+msgid "Nom"
+msgstr "Nom"
+
+#: template/partials/form/form.php:16
+msgid "Prénom"
+msgstr "Prénom"
+
+#: template/partials/form/form.php:28
+msgid "Adresse mail"
+msgstr "Adresse mail"
+
+#: template/partials/form/form.php:40
+msgid "Message"
+msgstr "Message"
+
+#: template/partials/form/form.php:42
+msgid "Je vous contacte pour..."
+msgstr "Je vous contacte pour…"
+
+#: template/partials/form/form.php:54
+msgid "Envoyer"
+msgstr "Envoyer"
+
+#: template/partials/home/stage.php:18
+msgid "Aller sur la page : À propos"
+msgstr "Aller sur la page : À propos"
+
+#: template/partials/single-project/stage.php:16
+msgid "Voir le projet"
+msgstr "Voir le projet"
+
+#: template/template-contact.php:21
+msgid "Les champs renseignées avec  (*)  sont obligatoires !"
+msgstr "Les champs renseignées avec  (*)  sont obligatoires !"
+
+#: template/template-legal.php:12
+msgid "Mis à jour le"
+msgstr "Mis à jour le"
+
+#: template/template-legal.php:17
+msgid "Contenu"
+msgstr "Contenu"
+
+#: template/template-projects.php:8
+msgid "L’ensemble de mes projets"
+msgstr "L’ensemble de mes projets"
+
+#: template/template-projects.php:37
+msgid "Filtres"
+msgstr "Filtres"
+
+#: template/template-projects.php:51
+msgid "Mes projets"
+msgstr "Mes projets"
+
+#: template/template-projects.php:74
+msgid "Revenez bientôt pour découvrir d’autres projets"
+msgstr "Revenez bientôt pour découvrir d’autres projets"

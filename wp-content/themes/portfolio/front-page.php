@@ -4,7 +4,7 @@ if (have_posts()): while (have_posts()): the_post(); ?>
     <?php include('template/partials/home/stage.php'); ?>
 
     <section class="recent__project">
-        <h2 class="sro">Mes derniers projets</h2>
+        <h2 class="sro"><?= __trans('Mes derniers projets'); ?></h2>
         <div class="projects__container">
             <?php $projects = new WP_Query([
                 'post_type' => 'project',
@@ -24,18 +24,17 @@ if (have_posts()): while (have_posts()): the_post(); ?>
                     <?= responsive_image($image, ['loading' => 'eager', 'classes' => 'project__card--image']) ?>
                     <a href="<?= get_the_permalink(); ?>"
                        class="project__card--link"
-                       title="Découvrir le projet">
-                        <span class="sro">Découvrir le projet : <?= get_the_title(); ?></span>
+                       title="<?= __trans('Découvrir le projet '); ?>&nbsp;: <?= get_the_title(); ?>">
+                        <span class="sro"><?= __trans('Découvrir le projet'); ?>&nbsp;: <?= get_the_title(); ?></span>
                     </a>
                 </article>
 
-            <?php endwhile; else: ?>
-                <p>Il n'y a aucun projets à voir pour le moment</p>
-            <?php endif; ?>
+            <?php endwhile; endif; ?>
             <?php wp_reset_postdata(); ?>
         </div>
         <div class="btn__container">
-            <a href="<?= get_field('low-link')['url']; ?>" title="Aller sur la page : Mes projets"
+            <a href="<?= get_field('low-link')['url']; ?>"
+               title="<?= __trans('Aller sur la page : Mes projets'); ?>"
                class="home--sublink arrow__link">
                 <?= get_field('low-link')['title']; ?>
             </a>
