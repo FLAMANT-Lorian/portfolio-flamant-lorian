@@ -17,6 +17,10 @@
       margin-bottom: 72px;
     }
 
+    @media (min-width: $desktop) {
+      margin-bottom: 96px;
+    }
+
   }
 }
 
@@ -35,6 +39,7 @@
 
   @media (min-width: $desktop) {
     justify-content: end;
+    margin-bottom: 96px;
   }
 
   .filter {
@@ -59,4 +64,8 @@
 .end__project {
   padding-top: 72px;
   text-align: center;
+
+  @media (min-width: $desktop){
+    padding-top: 96px;
+  }
 }

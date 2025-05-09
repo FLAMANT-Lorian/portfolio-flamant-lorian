@@ -6,8 +6,12 @@
   gap: 32px;
   margin-bottom: 96px;
 
-  &--image{
+  &--image {
     box-shadow: 0 0 20px -3px $black;
+  }
+
+  &--paragraph:not(:last-of-type) {
+    padding-bottom: 16px;
   }
 
   @media (min-width: $text-media-project) {
@@ -30,7 +34,7 @@
     column-gap: 216px;
     margin-bottom: 192px;
 
-    &--image{
+    &--image {
       object-position: center;
       object-fit: cover;
       width: 100%;
@@ -40,6 +44,10 @@
 
   &--title {
     padding-bottom: 16px;
+
+    @media (min-width: $tablet) {
+      padding-bottom: 24px;
+    }
 
     @media (min-width: $text-media-project) {
       padding-bottom: 40px;

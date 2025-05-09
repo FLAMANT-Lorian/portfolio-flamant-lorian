@@ -3,10 +3,11 @@
 
 .logo {
   display: flex;
+
   .fill {
     fill: $white;
 
-    @media (min-width: $semi-desktop) {
+    @media (min-width: $burger-menu-end) {
       fill: $red;
     }
   }
@@ -26,8 +27,11 @@
   padding: 16px 20px;
   box-sizing: border-box;
 
-  @media (min-width: $semi-desktop) {
+  @media (min-width: $burger-menu-end) {
     background-color: transparent;
+  }
+
+  @media (min-width: $semi-desktop) {
     padding: 24px 145px;
   }
 }
@@ -50,7 +54,7 @@
   box-sizing: border-box;
   transition: left .3s ease;
 
-  @media (min-width: $semi-desktop) {
+  @media (min-width: $burger-menu-end) {
     background-color: transparent;
     position: initial;
     width: auto;
@@ -79,7 +83,7 @@
     align-items: center;
     padding: 5px 4px;
 
-    @media (min-width: $semi-desktop) {
+    @media (min-width: $burger-menu-end) {
       display: none;
     }
 
@@ -125,7 +129,7 @@
     position: relative;
 
     &:after {
-      @media (min-width: $semi-desktop) {
+      @media (min-width: $burger-menu-end) {
         transform: scaleX(0);
         transform-origin: right;
         transition: transform .2s ease-in-out;
@@ -139,8 +143,8 @@
       }
     }
 
-    &:hover, &:active{
-      @media (min-width: $semi-desktop) {
+    &:hover, &:active {
+      @media (min-width: $burger-menu-end) {
         &:after {
           transform: scaleX(1);
           transform-origin: left;
