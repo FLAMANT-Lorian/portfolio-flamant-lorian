@@ -24,7 +24,8 @@
            title="<?= __trans('Aller directement au contenu principal de la page'); ?>" tabindex="1">
             <?= __trans('Aller vers le contenu de la page'); ?>
         </a>
-        <a href="<?= home_url(); ?>" class="logo">
+        <a href="<?= home_url(); ?>"
+           title="<?= __trans('Retourner à la page d’accueil'); ?>" class="logo">
             <svg width="117" height="32" viewBox="0 0 117 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path class="fill"
                       d="M18.7141 7.61302V3.75516H6.34882C5.07846 3.75516 4.05035 4.79255 4.05035 6.07106V25.3351C4.05035 26.6151 5.07994 27.7626 6.34882 27.7626H8.20266V17.8783H17.0272V14.1187H8.20266V7.61302H18.7141Z"/>

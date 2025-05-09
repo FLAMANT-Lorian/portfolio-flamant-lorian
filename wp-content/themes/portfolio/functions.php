@@ -234,7 +234,7 @@ function responsive_image($image, array $settings)
 }
 
 
-// Configuration Vite
+// Configuration Vite pour compilation CSS et JS
 
 function enqueue_assets_from_vite_manifest(): void
 {
