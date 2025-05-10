@@ -12,3 +12,4 @@ wp-content/themes/*
 !vite.config.js
 !package.json
 !postcss.config.js
+.DS_Store

@@ -103,6 +103,11 @@ fieldset {
   label {
     text-transform: none;
     padding-bottom: 8px;
+
+    @media (min-width: $semi-desktop){
+      font-size: 30px;
+      line-height: 30px;
+    }
   }
 }
 

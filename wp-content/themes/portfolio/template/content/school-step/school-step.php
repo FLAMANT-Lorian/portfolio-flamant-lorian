@@ -8,7 +8,6 @@ $school_steps = get_sub_field('school-step');
         <span class="last__point">.</span>
     </h3>
     <div class="school__steps__container">
-
         <?php foreach ($school_steps as $index => $school_step): ?>
             <article class="single__step" id="school__list--<?= $index; ?>">
                 <time datetime="<?= $school_step['year']; ?>"
@@ -25,7 +24,6 @@ $school_steps = get_sub_field('school-step');
                 </div>
             </article>
         <?php endforeach; ?>
-
     </div>
     <div class="slider__btn">
         <div class="btn" data-target="school__list--0"></div>
