@@ -9,6 +9,10 @@
     <title><?= get_the_title() . ' · Portoflio' ?></title>
     <link rel="stylesheet" href="<?= portfolio_asset('css'); ?>">
     <script src="<?= portfolio_asset('js') ?>" defer></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="<?= get_stylesheet_directory_uri(); ?>/resources/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?= get_stylesheet_directory_uri(); ?>/resources/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?= get_stylesheet_directory_uri(); ?>/resources/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="<?= get_stylesheet_directory_uri(); ?>/resources/img/favicon/site.webmanifest">
 </head>
 <body>
 <p class="no-js--message">

@@ -257,10 +257,6 @@ function enqueue_assets_from_vite_manifest(): void
     }
 }
 
-if (!is_admin()) {
-    enqueue_assets_from_vite_manifest();
-}
-
 // 1. Charger un fichier "public" (asset/image/css/script/...) pour le front-end sans que cela ne s'applique à l'admin.
 function portfolio_asset(string $file): string
 {
