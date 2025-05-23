@@ -29,7 +29,7 @@
                         $social_network_link = get_sub_field('social-network-link');
                         ?>
 
-                        <li class="footer__nav--item social__network--<?= $social_network_type; ?>">
+                        <li class="footer__nav--item social__network--<?= $social_network_type; ?>" itemprop="sameAs">
                             <a href="<?= $social_network_link['url']; ?>"
                                class="nav__link"
                                title="<?= __trans('Voir ma page'); ?>&nbsp;: <?= $social_network_type; ?>">

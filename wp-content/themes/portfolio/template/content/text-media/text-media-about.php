@@ -10,7 +10,7 @@ $position = get_sub_field('text-position');
             <?= __trans('Description de moi'); ?>
             <span class="last__point">.</span>
         </h3>
-        <p class="text__media__about--text">
+        <p class="text__media__about--text" itemprop="description">
             <?= $text; ?>
         </p>
     </div>

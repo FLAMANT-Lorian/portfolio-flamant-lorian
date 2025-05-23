@@ -14,7 +14,7 @@ endif;
             <?= __trans('Découvrir d’autres projets'); ?>
             <span class="last__point">.</span>
         </h2>
-        <div class="projects__container">
+        <div class="projects__container" itemprop="knowsAbout" itemscope="" itemtype="https://schema.org/CreativeWork">
             <?php $projects = new WP_Query([
                 'post_type' => 'project',
                 'order' => 'DESC',
@@ -28,7 +28,7 @@ endif;
                 ?>
 
                 <article class="project__card">
-                    <h3 class="project__card--title">
+                    <h3 class="project__card--title" itemprop="workExample">
                         <?= get_the_title(); ?>
                     </h3>
                     <?= responsive_image($image, ['loading' => 'eager', 'classes' => 'project__card--image']) ?>

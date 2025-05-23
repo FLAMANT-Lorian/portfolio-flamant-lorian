@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="<?= __trans('Portfolio de Lorian Flamant'); ?>">
-    <meta name="keywords" content="HEPL, Web Developer, Flamant Lorian">
-    <meta name="Auhtor" content="<?= get_field('first_name', 'options') . ' ' . get_field('last_name', 'options') ?>">
+    <meta name="keywords" content="HEPL, Web Developer, Flamant Lorian, Lorian, Flamant, Web, portfolio, web development, SEO, Front-end, back-end, accessibility">
+    <meta name="Auhtor" content="Flamant Lorian">
+    <meta property="og:title" content="Accueil · Portfolio Flamant Lorian">
+    <meta property="og:description" content="Portfolio de Lorian Flamant">
+    <meta property="og:image:alt" content="Page d'accueil du site de Lorian Flamant">
+    <meta property="og:image" content="<?= get_stylesheet_directory_uri(); ?>/resources/img/share-cover.png">
+    <meta name="theme-color" content="#D02B27">
     <title><?= get_the_title() . ' · Portoflio' ?></title>
     <link rel="stylesheet" href="<?= portfolio_asset('css'); ?>">
     <script src="<?= portfolio_asset('js') ?>" defer></script>
@@ -14,7 +19,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="<?= get_stylesheet_directory_uri(); ?>/resources/img/favicon/favicon-16x16.png">
     <link rel="manifest" href="<?= get_stylesheet_directory_uri(); ?>/resources/img/favicon/site.webmanifest">
 </head>
-<body>
+<body itemscope itemtype="https://schema.org/Person">
 <p class="no-js--message">
     <?= __trans('Pour accéder à toutes les fonctionnalités de ce site, vous devez activer JavaScript.'); ?>
     <?= __trans('Voici les'); ?>

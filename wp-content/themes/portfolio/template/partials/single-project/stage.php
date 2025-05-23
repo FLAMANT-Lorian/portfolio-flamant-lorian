@@ -1,4 +1,4 @@
-<section class="single__stage">
+<section class="single__stage" itemscope itemtype="https://schema.org/CreativeWork">
     <?php if (have_rows('stage')): while (have_rows('stage')): the_row(); ?>
         <div class="btn__container">
             <a href="<?= get_sub_field('link')['url']; ?>"
@@ -7,7 +7,7 @@
                 <?= get_sub_field('link')['title']; ?>
             </a>
         </div>
-        <h2 class="single__stage--title">
+        <h2 class="single__stage--title" itemprop="name">
             <?= get_sub_field('main-title'); ?>
             <span class="last__point">.</span>
         </h2>

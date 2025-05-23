@@ -7,7 +7,8 @@ $school_steps = get_sub_field('school-step');
         <?= $title; ?>
         <span class="last__point">.</span>
     </h3>
-    <div class="school__steps__container">
+    <div class="school__steps__container" itemprop="alumniOf" itemscope
+         itemtype="https://schema.org/EducationalOrganization">
         <?php foreach ($school_steps as $index => $school_step): ?>
             <article class="single__step" id="school__list--<?= $index; ?>">
                 <time datetime="<?= $school_step['year']; ?>"
@@ -15,7 +16,7 @@ $school_steps = get_sub_field('school-step');
                     <?= $school_step['year']; ?>
                 </time>
                 <div class="single__step--info">
-                    <h4 class="single__step--title">
+                    <h4 class="single__step--title" itemprop="alumni">
                         <?= $school_step['school-name'] ?>
                     </h4>
                     <p class="single__step--orientation">

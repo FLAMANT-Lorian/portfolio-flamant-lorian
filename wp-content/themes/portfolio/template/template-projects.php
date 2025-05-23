@@ -47,7 +47,7 @@
             </a>
         <?php endforeach; ?>
     </section>
-    <section class="projects__archive">
+    <section class="projects__archive" itemprop="knowsAbout" itemscope="" itemtype="https://schema.org/CreativeWork">
         <h3 class="sro"><?= __trans('Mes projets'); ?></h3>
         <div class="projects__container">
 
@@ -56,7 +56,7 @@
                 ?>
 
                 <article class="project__card" data-showUp="true">
-                    <h3 class="project__card--title">
+                    <h3 class="project__card--title" itemprop="workExample">
                         <?= get_the_title(); ?>
                     </h3>
                     <?= responsive_image($image, ['loading' => "eager", 'classes' => 'project__card--image']); ?>

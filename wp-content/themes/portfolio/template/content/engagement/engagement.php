@@ -22,14 +22,14 @@ $engagements = get_sub_field('engagement-card');
             </a>
         </div>
     </div>
-    <div class="commitments__container">
+    <div class="commitments__container" itemscope itemtype="https://schema.org/CreativeWork">
         <?php if (have_rows('engagement-card')): ?>
             <?php while (have_rows('engagement-card')): the_row(); ?>
                 <article class="simple__commitment">
-                    <h4 class="simple__commitment--title">
+                    <h4 class="simple__commitment--title" itemprop="about">
                         <?= get_sub_field('engagement-name'); ?>
                     </h4>
-                    <p class="simple__commitment--text">
+                    <p class="simple__commitment--text" itemprop="abstract">
                         <?= get_sub_field('engagement-description', format_value: false); ?>
                     </p>
                 </article>

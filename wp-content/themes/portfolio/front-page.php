@@ -3,7 +3,7 @@ if (have_posts()): while (have_posts()): the_post(); ?>
 
     <?php include('template/partials/home/stage.php'); ?>
 
-    <section class="recent__project">
+    <section class="recent__project" itemprop="knowsAbout" itemscope="" itemtype="https://schema.org/CreativeWork">
         <h2 class="sro"><?= __trans('Mes derniers projets'); ?></h2>
         <div class="projects__container">
             <?php $projects = new WP_Query([
@@ -18,7 +18,7 @@ if (have_posts()): while (have_posts()): the_post(); ?>
                 ?>
 
                 <article class="project__card" data-showUp="true">
-                    <h3 class="project__card--title">
+                    <h3 class="project__card--title" itemprop="workExample">
                         <?= get_the_title(); ?>
                     </h3>
                     <?= responsive_image($image, ['loading' => 'eager', 'classes' => 'project__card--image']) ?>
