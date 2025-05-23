@@ -3,13 +3,13 @@
 @media (min-width: $tablet) {
   .lines {
     box-sizing: border-box;
-    padding: 0 136px;
+    padding: 0 8.5rem;
     position: absolute;
     z-index: -10;
     display: flex;
     justify-content: space-between;
-    height: calc(100% - 64px);
-    margin-top: -64px;
+    height: calc(100% - 4rem);
+    margin-top: -4rem;
     width: 100%;
     max-width: 2000px;
 
@@ -18,8 +18,8 @@
       background-color: $red-line;
 
       @media (min-width: $semi-desktop) {
-        margin-top: -77px;
-        height: calc(100% - 77px);
+        margin-top: -4.8125rem;
+        height: calc(100% - 4.8125rem);
       }
     }
   }
@@ -27,6 +27,6 @@
 
 @media (min-width: $semi-desktop) {
   .lines {
-    padding: 0 285px;
+    padding: 0 17.8125rem;
   }
 }

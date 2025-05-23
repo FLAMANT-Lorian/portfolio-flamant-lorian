@@ -3,28 +3,28 @@
 .commitments {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 32px;
-  margin-bottom: 96px;
+  gap: 3rem;
+  margin-bottom: 6rem;
 
   @media (min-width: $tablet) {
-    margin-bottom: 144px;
-    gap: 72px;
+    margin-bottom: 9rem;
+    gap: 4.5rem;
   }
 
   @media (min-width: $commitments) {
     grid-template-columns: 1fr 1fr;
-    gap: 144px;
+    gap: 9rem;
   }
 }
 
 .info__container {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 32px;
+  gap: 2rem;
 
   @media (min-width: $tablet) {
     grid-template-columns: repeat(9, 1fr);
-    row-gap: 24px;
+    row-gap: 1.5rem;
 
     .commitments {
       &--title {
@@ -49,9 +49,9 @@
   @media (min-width: $commitments) {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 1.5rem;
 
-    .btn__container{
+    .btn__container {
       align-self: start;
     }
   }
@@ -64,10 +64,10 @@
 .commitments__container {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
+  gap: 1.5rem;
 
   @media (min-width: $tablet) {
-    grid-template-columns: repeat(2, 335px);
+    grid-template-columns: repeat(2, 20.9375rem);
   }
 
   @media (min-width: $semi-desktop) {
@@ -77,11 +77,11 @@
 
 .simple__commitment {
   position: relative;
-  padding: 24px;
+  padding: 1.5rem;
 
   &--title {
     text-transform: none;
-    padding-bottom: 24px;
+    padding-bottom: 1.5rem;
   }
 
   &:before {

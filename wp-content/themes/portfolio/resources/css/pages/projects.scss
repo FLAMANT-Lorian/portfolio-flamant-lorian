@@ -3,7 +3,7 @@
 .project {
 
   &--title {
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
 
     @media (min-width: $desktop){
       max-width: 1300px;
@@ -11,14 +11,14 @@
   }
 
   &--text {
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
 
     @media (min-width: $tablet) {
-      margin-bottom: 72px;
+      margin-bottom: 4.5rem;
     }
 
     @media (min-width: $desktop) {
-      margin-bottom: 96px;
+      margin-bottom: 6rem;
     }
 
   }
@@ -27,30 +27,30 @@
 .filter__container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px 16px;
-  margin-bottom: 40px;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
 
   @media (min-width: $tablet) {
     display: flex;
     flex-direction: row;
-    gap: 32px;
-    margin-bottom: 72px;
+    gap: 2rem;
+    margin-bottom: 4.5rem;
   }
 
   @media (min-width: $desktop) {
     justify-content: end;
-    margin-bottom: 96px;
+    margin-bottom: 6rem;
   }
 
   .filter {
     border: 1px solid $grey;
     color: $grey;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 0.003em;
     text-align: center;
     text-transform: uppercase;
-    padding: 10px 16px;
+    padding: 0.625rem 1rem;
     border-radius: 8px;
 
     &.active, &:hover {
@@ -62,10 +62,10 @@
 }
 
 .end__project {
-  padding-top: 72px;
+  padding-top: 4.5rem;
   text-align: center;
 
   @media (min-width: $desktop){
-    padding-top: 96px;
+    padding-top: 6rem;
   }
 }

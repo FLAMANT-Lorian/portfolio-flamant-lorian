@@ -2,7 +2,15 @@
 
 .contact__form {
   &--title {
-    padding-bottom: 16px;
+    padding-bottom: 1rem;
+
+    @media (min-width:$semi-desktop) {
+      padding: 0;
+    }
+
+    @media (min-width: $desktop) {
+      max-width: 1300px;
+    }
   }
 }
 
@@ -10,8 +18,8 @@
   .contact__form__container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: 24px;
-    padding-top: 96px;
+    gap: 1.5rem;
+    padding-top: 6rem;
   }
 
   .contact__left {
@@ -24,23 +32,23 @@
 }
 
 .contact__text {
-  padding-bottom: 96px;
+  padding-bottom: 6rem;
   max-width: 592px;
 }
 
 .require__message {
-  padding-bottom: 16px;
+  padding-bottom: 1rem;
 }
 
 fieldset {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 32px;
+  gap: 2rem;
 
   @media (min-width: $tablet) {
     grid-template-columns: 1fr 1fr;
-    row-gap: 32px;
-    column-gap: 24px;
+    row-gap: 2rem;
+    column-gap: 1.5rem;
     grid-template-areas:  "lastname firstname"
                           "email    email"
                           "subject  subject";
@@ -76,16 +84,16 @@ fieldset {
     font-family: $inter;
     background-color: $light-grey-hover;
     border: 1px solid $grey;
-    padding: 16px 12px;
+    padding: 1rem 0.75rem;
     border-radius: 8px;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     box-sizing: border-box;
 
     &::placeholder {
       opacity: .8;
-      font-size: 16px;
-      line-height: 20px;
+      font-size: 1rem;
+      line-height: 1.25rem;
     }
 
     &:focus {
@@ -104,8 +112,8 @@ fieldset {
     padding-bottom: 8px;
 
     @media (min-width: $semi-desktop){
-      font-size: 30px;
-      line-height: 30px;
+      font-size: 1.875rem;
+      line-height: 1.875rem;
     }
   }
 }
@@ -115,18 +123,18 @@ fieldset {
   color: $white;
   font-family: $inter;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 34px;
+  font-size: 1.25rem;
+  line-height: 2.125rem;
   letter-spacing: -0.003em;
   width: 100%;
-  padding: 10px 32px;
+  padding: 0.625rem 2rem;
   border: 1px solid $red;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
   border-radius: 8px;
-  margin-top: 32px;
+  margin-top: 2rem;
   transition: all .3s ease-in-out;
   position: relative;
 
@@ -148,16 +156,16 @@ fieldset {
 }
 
 .error {
-  padding-top: 8px;
+  padding-top: 0.5rem;
   color: $red;
 }
 
 .success__message {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
-  line-height: 32px;
+  line-height: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 24px;
+  padding: 1.5rem;
 }

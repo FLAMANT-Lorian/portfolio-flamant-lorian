@@ -9,6 +9,7 @@
         </div>
         <h2 class="single__stage--title">
             <?= get_sub_field('main-title'); ?>
+            <span class="last__point">.</span>
         </h2>
         <div class="btn__container">
             <a href="<?= get_sub_field('site-link')['url']; ?>"

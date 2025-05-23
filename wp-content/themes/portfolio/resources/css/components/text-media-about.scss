@@ -3,14 +3,14 @@
 .text__media__about {
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 32px;
-  margin-bottom: 96px;
+  row-gap: 2rem;
+  margin-bottom: 6rem;
 
   @media (min-width: $tablet) {
-    margin-bottom: 144px;
+    margin-bottom: 9rem;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 112px;
+    gap: 7rem;
 
     &--left {
       .text__media__about--info {
@@ -26,8 +26,8 @@
   }
 
   @media (min-width: $media) {
-    gap: 216px;
-    margin-bottom: 192px;
+    gap: 13.5rem;
+    margin-bottom: 12rem;
 
     &--image{
       object-fit: cover;

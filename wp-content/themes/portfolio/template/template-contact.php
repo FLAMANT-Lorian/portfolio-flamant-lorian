@@ -8,6 +8,7 @@ the_post(); ?>
 
     <h2 class="contact__form--title">
         <?= get_field('main-title'); ?>
+        <span class="last__point">.</span>
     </h2>
     <div class="contact__form__container">
 

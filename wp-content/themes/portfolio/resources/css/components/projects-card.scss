@@ -3,18 +3,18 @@
 .projects__container {
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 40px;
+  row-gap: 2.5rem;
 
   @media (min-width: $tablet) {
     grid-template-columns: repeat(9, 1fr);
-    row-gap: 72px;
-    column-gap: 24px;
+    row-gap: 4.5rem;
+    column-gap: 1.5rem;
   }
 
   @media (min-width: $desktop) {
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 140px;
-    row-gap: 96px;
+    column-gap: 8.75rem;
+    row-gap: 6rem;
   }
 
 }
@@ -22,7 +22,7 @@
 .project__card {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 0.5rem;
   position: relative;
   transition: all .3s ease-out;
 
@@ -48,7 +48,7 @@
 
 
   @media (min-width: $desktop) {
-    gap: 16px;
+    gap: 1rem;
   }
 
   &:hover, &:active {
@@ -58,8 +58,8 @@
 
   &--title {
     @media (min-width: $desktop) {
-      font-size: 30px;
-      line-height: 30px;
+      font-size: 1.875rem;
+      line-height: 1.875rem;
     }
   }
 

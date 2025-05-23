@@ -24,7 +24,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 20px;
+  padding: 1rem 1.25rem;
   box-sizing: border-box;
 
   @media (min-width: $burger-menu-end) {
@@ -32,24 +32,24 @@
   }
 
   @media (min-width: $semi-desktop) {
-    padding: 24px 145px;
+    padding: 1.5rem 9.0625rem;
   }
 }
 
 .nav__container {
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: 3rem;
   background-color: $white;
   z-index: 10;
   width: 100vw;
   height: 100vh;
   position: fixed;
-  top: 64px;
+  top: 4rem;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 72px;
+  padding: 4.5rem;
   text-align: center;
   box-sizing: border-box;
   transition: left .3s ease;
@@ -81,7 +81,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px 4px;
+    padding: 0.3125rem 0.25rem;
 
     @media (min-width: $burger-menu-end) {
       display: none;
@@ -123,8 +123,8 @@
   a {
     margin: auto;
     color: $grey;
-    font-size: 24px;
-    line-height: 29px;
+    font-size: 1.5rem;
+    line-height: 1.8125rem;
     font-weight: 400;
     position: relative;
 
