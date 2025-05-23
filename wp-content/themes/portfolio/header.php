@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="<?= __trans('Portfolio de Lorian Flamant'); ?>">
     <meta name="keywords" content="HEPL, Web Developer, Flamant Lorian, Lorian, Flamant, Web, portfolio, web development, SEO, Front-end, back-end, accessibility">
+    <meta name="title" content="Portfolio de Lorian Flamant">
     <meta name="Auhtor" content="Flamant Lorian">
     <meta property="og:title" content="Accueil · Portfolio Flamant Lorian">
     <meta property="og:description" content="Portfolio de Lorian Flamant">
