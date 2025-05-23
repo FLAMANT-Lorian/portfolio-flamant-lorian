@@ -143,12 +143,6 @@ function create_site_options_page()
             'capability' => 'edit_posts',
             'redirect' => false
         ]);
-
-        acf_add_options_sub_page([
-            'page_title' => 'SEO Settings',
-            'menu_title' => 'SEO',
-            'parent_slug' => 'site-options',
-        ]);
     }
 }
 

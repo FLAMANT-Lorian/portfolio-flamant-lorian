@@ -18,7 +18,7 @@ the_post(); ?>
         </article>
         <section class="contact__right">
             <p class="require__message">
-                <?= __trans('Les champs renseignées avec  (*)  sont obligatoires !'); ?>
+                <?= __trans('Les champs renseignés avec  (*)  sont obligatoires !'); ?>
             </p>
             <?php $success = $_SESSION['contact_form_success'] ?? false;
             unset($_SESSION['contact_form_success']);
