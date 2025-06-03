@@ -8,11 +8,13 @@ $logos = get_sub_field('languages-logo');
         <?= $title; ?>
         <span class="last__point">.</span>
     </h3>
-    <div class="language__gallery">
-        <?php for ($i = 0; $i < 2; $i++): ?>
+    <div class="language--wrapper">
+        <div class="language--gallery">
+            <?php for ($i = 0; $i < 2; $i++): ?>
 
-           <?php foreach ($logos as $logo): ?>
-                <?= responsive_image($logo, ['loading' => 'lazy', 'classes' => 'single__language--image']) ?>
-            <?php endforeach; endfor; ?>
+                <?php foreach ($logos as $logo): ?>
+                    <?= responsive_image($logo, ['loading' => 'lazy', 'classes' => 'single__language--image']) ?>
+                <?php endforeach; endfor; ?>
+        </div>
     </div>
 </section>

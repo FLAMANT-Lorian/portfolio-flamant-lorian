@@ -14,7 +14,8 @@
         <div class="btn__container">
             <a href="<?= get_sub_field('site-link')['url']; ?>"
                class="arrow__link single__stage--sublink"
-               title="<?= __trans('Voir le projet'); ?>">
+               title="<?= __trans('Voir le projet'); ?>"
+               target="_blank">
                 <?= get_sub_field('site-link')['title']; ?>
             </a>
         </div>

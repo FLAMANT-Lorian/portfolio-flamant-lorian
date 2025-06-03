@@ -37,7 +37,7 @@
         </div>
 
         <div class="field message">
-            <label for="message"><?= __trans('Message'); ?><strong> *</strong></label>
+            <label for="message"><?= __trans('Message'); ?><strong class="required"> *</strong></label>
             <textarea name="message" id="message" cols="30" rows="10" placeholder="<?= __trans('Je vous contacte pour...'); ?>" required><?php if (isset($_SESSION['old']['message'])): ?><?= $_SESSION['old']['message']; ?><?php endif; ?></textarea>
             <?php if (isset($_SESSION['errors']['message'])): ?>
                 <p class="error"><?= $_SESSION['errors']['message']; ?></p>

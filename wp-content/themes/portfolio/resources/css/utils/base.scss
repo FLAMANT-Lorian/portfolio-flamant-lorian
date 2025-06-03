@@ -59,7 +59,9 @@ h2 {
   font-weight: 900;
   line-height: 3.4375rem;
   letter-spacing: -0.006em;
-  max-width: 335px;
+  word-break: break-word;
+  hyphens: auto;
+
 
   .last__point {
     margin-left: -10px;
@@ -68,7 +70,6 @@ h2 {
   @media (min-width: $tablet) {
     font-size: 6.25rem;
     line-height: 5.625rem;
-    max-width: 592px;
 
 
     .last__point {
@@ -80,7 +81,6 @@ h2 {
     font-size: 10rem;
     line-height: 12.375rem;
     letter-spacing: -0.025em;
-    max-width: 1069px;
 
     .last__point {
       margin-left: -1.5625rem;
@@ -91,7 +91,6 @@ h2 {
     font-size: 13.75rem;
     line-height: 12.375rem;
     letter-spacing: -0.025em;
-    max-width: 1069px;
 
     .last__point {
       margin-left: -1.875rem;

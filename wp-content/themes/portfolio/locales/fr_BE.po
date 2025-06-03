@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2025-05-23 16:23+0200\n"
-"PO-Revision-Date: 2025-05-23 16:23+0200\n"
+"POT-Creation-Date: 2025-06-03 18:38+0200\n"
+"PO-Revision-Date: 2025-06-03 18:38+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_BE\n"
@@ -30,7 +30,7 @@ msgstr "Retourner à l’accueil"
 msgid "Navigation"
 msgstr "Navigation"
 
-#: footer.php:13 header.php:86
+#: footer.php:13 header.php:92
 msgid "Aller sur la page : "
 msgstr "Aller sur la page : "
 
@@ -83,11 +83,11 @@ msgstr "Aller sur la page : Mes projets"
 msgid "fr"
 msgstr "fr"
 
-#: header.php:6 header.php:25
+#: header.php:6 header.php:31
 msgid "Portfolio de Lorian Flamant"
 msgstr "Portfolio de Lorian Flamant"
 
-#: header.php:19
+#: header.php:25
 msgid ""
 "Pour accéder à toutes les fonctionnalités de ce site, vous devez activer "
 "JavaScript."
@@ -95,27 +95,27 @@ msgstr ""
 "Pour accéder à toutes les fonctionnalités de ce site, vous devez activer "
 "JavaScript."
 
-#: header.php:20
+#: header.php:26
 msgid "Voici les"
 msgstr "Voici les"
 
-#: header.php:21
+#: header.php:27
 msgid "instructions pour activer JavaScript dans votre navigateur Web"
 msgstr "instructions pour activer JavaScript dans votre navigateur Web"
 
-#: header.php:28
+#: header.php:34
 msgid "Aller directement au contenu principal de la page"
 msgstr "Aller directement au contenu principal de la page"
 
-#: header.php:29
+#: header.php:35
 msgid "Aller vers le contenu de la page"
 msgstr "Aller vers le contenu de la page"
 
-#: header.php:32
+#: header.php:38
 msgid "Retourner à la page d’accueil"
 msgstr "Retourner à la page d’accueil"
 
-#: header.php:75
+#: header.php:81
 msgid "Navigation principale"
 msgstr "Navigation principale"
 
@@ -187,6 +187,10 @@ msgstr "L’ensemble de mes projets"
 #: template/template-projects.php:37
 msgid "Filtres"
 msgstr "Filtres"
+
+#: template/template-projects.php:40
+msgid "Tout"
+msgstr "Tout"
 
 #: template/template-projects.php:51
 msgid "Mes projets"

@@ -37,7 +37,7 @@
         <h3 class="sro"><?= __trans('Filtres'); ?></h3>
         <a href="<?= esc_url(get_permalink()); ?>"
            class="filter <?= ($current_filter === '') ? 'active' : ''; ?>">
-            Tout
+            <?= __trans('Tout') ?>
         </a>
 
         <?php foreach ($terms as $term): ?>
