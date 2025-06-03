@@ -17,6 +17,11 @@
       }
     }
   }
+
+  &--title{
+    word-break: break-word;
+    hyphens: auto;
+  }
 }
 
 .privacy__container {
