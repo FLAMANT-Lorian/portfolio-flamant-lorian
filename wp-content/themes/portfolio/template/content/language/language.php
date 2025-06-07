@@ -4,7 +4,7 @@ $logos = get_sub_field('languages-logo');
 ?>
 
 <section class="language" data-showUp="true">
-    <h3 class="language--title">
+    <h3 class="language--title" role="heading" aria-level="3">
         <?= $title; ?>
         <span class="last__point">.</span>
     </h3>

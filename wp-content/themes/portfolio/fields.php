@@ -1467,9 +1467,9 @@ add_action( 'acf/include_fields', function() {
                 'layout' => 'block',
                 'sub_fields' => array(
                     array(
-                        'key' => 'field_681728e8f729f',
-                        'label' => 'Lien vers le site du développeur',
-                        'name' => 'developer-site-link',
+                        'key' => 'field_68172901f72a0',
+                        'label' => 'Lien vers mentions légales FR',
+                        'name' => 'legal-notices-fr',
                         'aria-label' => '',
                         'type' => 'link',
                         'instructions' => '',
@@ -1484,9 +1484,9 @@ add_action( 'acf/include_fields', function() {
                         'allow_in_bindings' => 0,
                     ),
                     array(
-                        'key' => 'field_68172901f72a0',
-                        'label' => 'Lien vers mentions légales',
-                        'name' => 'legal-notices',
+                        'key' => 'field_684457e4f5547',
+                        'label' => 'Lien vers mentions légales EN',
+                        'name' => 'legal-notices-en',
                         'aria-label' => '',
                         'type' => 'link',
                         'instructions' => '',

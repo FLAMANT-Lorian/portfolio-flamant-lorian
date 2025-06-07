@@ -5,12 +5,11 @@
 <?php include('partials/project/stage.php'); ?>
 
 <section>
-    <h2 class="sro"><?= __trans('L’ensemble de mes projets'); ?></h2>
+    <h2 class="sro" role="heading" aria-level="2"><?= __trans('L’ensemble de mes projets'); ?></h2>
     <?php
     $taxonomy = isset($_GET['filter']) ? sanitize_text_field($_GET['filter']) : '';
     $args = [
         'post_type' => 'project',
-        'posts_per_page' => 6,
     ];
 
     if ($taxonomy !== '') {
@@ -34,21 +33,25 @@
     $current_filter = isset($_GET['filter']) ? sanitize_text_field($_GET['filter']) : '';
     ?>
     <section class="filter__container">
-        <h3 class="sro"><?= __trans('Filtres'); ?></h3>
+        <h3 class="sro" role="heading" aria-level="3"><?= __trans('Filtres'); ?></h3>
         <a href="<?= esc_url(get_permalink()); ?>"
-           class="filter <?= ($current_filter === '') ? 'active' : ''; ?>">
+           class="filter <?= ($current_filter === '') ? 'active' : ''; ?>"
+           title="<?= __trans('Filtre : tout') ?>"
+           aria-label="<?= __trans('Tout') ?>">
             <?= __trans('Tout') ?>
         </a>
 
         <?php foreach ($terms as $term): ?>
             <a href="<?= esc_url(get_permalink()) . '?filter=' . $term->slug; ?>"
-               class="filter <?= ($current_filter === $term->slug) ? 'active' : ''; ?>">
+               class="filter <?= ($current_filter === $term->slug) ? 'active' : ''; ?>"
+               title="<?= $term->name ?>"
+               aria-label="<?= $term->name ?>">
                 <?= esc_html($term->name); ?>
             </a>
         <?php endforeach; ?>
     </section>
     <section class="projects__archive" itemprop="knowsAbout" itemscope="" itemtype="https://schema.org/CreativeWork">
-        <h3 class="sro"><?= __trans('Mes projets'); ?></h3>
+        <h3 class="sro" role="heading" aria-level="3"><?= __trans('Mes projets'); ?></h3>
         <div class="projects__container">
 
             <?php if ($query->have_posts()): while ($query->have_posts()): $query->the_post();
@@ -56,13 +59,14 @@
                 ?>
 
                 <article class="project__card" data-showUp="true">
-                    <h3 class="project__card--title" itemprop="workExample">
+                    <h3 class="project__card--title" itemprop="workExample" role="heading" aria-level="3">
                         <?= get_the_title(); ?>
                     </h3>
                     <?= responsive_image($image, ['loading' => "eager", 'classes' => 'project__card--image']); ?>
                     <a href="<?= get_the_permalink(); ?>"
                        class="project__card--link"
-                       title="<?= __trans('Découvrir le projet '); ?>&nbsp;: <?= get_the_title(); ?>">
+                       title="<?= __trans('Découvrir le projet '); ?>&nbsp;: <?= get_the_title(); ?>"
+                       aria-label="<?= __trans('Découvrir le projet '); ?>&nbsp;: <?= get_the_title(); ?>">
                         <span class="sro"><?= __trans('Découvrir le projet '); ?>&nbsp;: <?= get_the_title(); ?></span>
                     </a>
                 </article>

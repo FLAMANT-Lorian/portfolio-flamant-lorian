@@ -3,7 +3,7 @@
 <?= get_header(); ?>
 
     <section class="privacy">
-        <h2 class="privacy--title">
+        <h2 class="privacy--title" role="heading" aria-level="2">
             <?= __trans('Mentions légales'); ?>
             <span class="last__point">.</span>
         </h2>
@@ -14,7 +14,7 @@
         </p>
     </section>
     <section class="privacy__container">
-        <h2 class="sro"><?= __trans('Contenu'); ?></h2>
+        <h2 class="sro" role="heading" aria-level="2"><?= __trans('Contenu'); ?></h2>
         <?= get_field('legal', format_value: false); ?>
     </section>
 

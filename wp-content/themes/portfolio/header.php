@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="<?= __trans('Portfolio de Lorian Flamant'); ?>">
-    <meta name="keywords" content="HEPL, Web Developer, Flamant Lorian, Lorian, Flamant, Web, portfolio, web development, SEO, Front-end, back-end, accessibility">
+    <meta name="keywords"
+          content="HEPL, Web Developer, Flamant Lorian, Lorian, Flamant, Web, portfolio, web development, SEO, Front-end, back-end, accessibility">
     <meta name="title" content="Portfolio de Lorian Flamant">
     <meta name="Auhtor" content="Flamant Lorian">
     <meta property="og:title" content="Accueil · Portfolio Flamant Lorian">
@@ -15,9 +16,12 @@
     <title><?= get_the_title() . ' · Portoflio' ?></title>
     <link rel="stylesheet" href="<?= portfolio_asset('css'); ?>">
     <script src="<?= portfolio_asset('js') ?>" defer></script>
-    <link rel="apple-touch-icon" sizes="180x180" href="<?= get_stylesheet_directory_uri(); ?>/resources/img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="<?= get_stylesheet_directory_uri(); ?>/resources/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="<?= get_stylesheet_directory_uri(); ?>/resources/img/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180"
+          href="<?= get_stylesheet_directory_uri(); ?>/resources/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+          href="<?= get_stylesheet_directory_uri(); ?>/resources/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+          href="<?= get_stylesheet_directory_uri(); ?>/resources/img/favicon/favicon-16x16.png">
     <link rel="manifest" href="<?= get_stylesheet_directory_uri(); ?>/resources/img/favicon/site.webmanifest">
 </head>
 <body itemscope itemtype="https://schema.org/Person">
@@ -28,15 +32,19 @@
         .</a>
 </p>
 <header class="header">
-    <h1 class="sro"><?= __trans('Portfolio de Lorian Flamant'); ?></h1>
-    <nav class="nav__bar">
+    <h1 class="sro" role="heading" aria-level="1"><?= __trans('Portfolio de Lorian Flamant'); ?></h1>
+    <nav class="nav__bar" role="navigation" aria-label="main">
         <a class="skip__link sro" href="#contenu"
-           title="<?= __trans('Aller directement au contenu principal de la page'); ?>" tabindex="1">
+           title="<?= __trans('Aller directement au contenu principal de la page'); ?>"
+           aria-label="<?= __trans('Aller directement au contenu principal de la page'); ?>">
             <?= __trans('Aller vers le contenu de la page'); ?>
         </a>
         <a href="<?= home_url(); ?>"
-           title="<?= __trans('Retourner à la page d’accueil'); ?>" class="logo">
-            <svg width="117" height="32" viewBox="0 0 117 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+           class="logo"
+           title="<?= __trans('Retourner à la page d’accueil'); ?>"
+           aria-label="<?= __trans('Retourner à la page d’accueil'); ?>">
+            <svg width="117" height="32" viewBox="0 0 117 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+                 focusable="false">
                 <path class="fill"
                       d="M18.7141 7.61302V3.75516H6.34882C5.07846 3.75516 4.05035 4.79255 4.05035 6.07106V25.3351C4.05035 26.6151 5.07994 27.7626 6.34882 27.7626H8.20266V17.8783H17.0272V14.1187H8.20266V7.61302H18.7141Z"/>
                 <path class="fill"
@@ -71,14 +79,15 @@
         </a>
         <input type="checkbox" tabindex="0" id="toggle__checkbox" class="bgm--checkbox">
         <label for="toggle__checkbox" class="bgm--label">
-            <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg"
+                 focusable="false">
                 <path d="M2 2H22" stroke-width="3" stroke-linecap="round"/>
                 <path d="M5 11H19" stroke-width="3" stroke-linecap="round"/>
                 <path d="M2 20H22" stroke-width="3" stroke-linecap="round"/>
             </svg>
 
         </label>
-        <h2 class="sro"><?= __trans('Navigation principale'); ?></h2>
+        <h2 class="sro" role="heading" aria-level="2"><?= __trans('Navigation principale'); ?></h2>
         <ul class="nav__container">
             <?php foreach (dw_get_navigation_links('header') as $link): ?>
                 <?php
@@ -89,15 +98,22 @@
                 <li class="nav__item">
                     <a href="<?= $link->href; ?>"
                        class="nav__links <?= $is_active ? 'active' : ''; ?>"
-                       title="<?= __trans('Aller sur la page : ') ?><?= $link->label ?>">
+                       title="<?= __trans('Aller sur la page : ') ?><?= $link->label ?>"
+                       aria-label="<?= __trans('Aller sur la page : ') ?><?= $link->label ?>">
                         <?= $link->label; ?>
                     </a>
                 </li>
             <?php endforeach; ?>
             <?php foreach (pll_the_languages(['raw' => true, 'hide_current' => 1]) as $lang): ?>
                 <li class="nav__item languages__item<?= $lang['current_lang'] ? ' languages__item--current' : '' ?>">
-                    <a href="<?= $lang['url'] ?>" lang="<?= $lang['locale'] ?>" hreflang="<?= $lang['locale'] ?>"
-                       class="languages__link"><?= $lang['slug'] ?></a>
+                    <a href="<?= $lang['url'] ?>"
+                       lang="<?= $lang['locale'] ?>"
+                       hreflang="<?= $lang['locale'] ?>"
+                       class="languages__link"
+                       title="<?= $lang['slug'] ?>"
+                       aria-label="<?= $lang['slug'] ?>">
+                        <?= $lang['slug'] ?>
+                    </a>
                 </li>
             <?php endforeach; ?>
         </ul>
