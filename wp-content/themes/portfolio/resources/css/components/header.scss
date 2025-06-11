@@ -98,6 +98,10 @@
   }
 }
 
+body:has(.bgm--checkbox:checked) {
+  overflow: hidden
+}
+
 .bgm--checkbox:checked ~ .bgm--label {
   path:first-of-type {
     transform-origin: center;
