@@ -33,6 +33,7 @@
                         <li class="footer__nav--item social__network--<?= $social_network_type; ?>" itemprop="sameAs">
                             <a href="<?= $social_network_link['url']; ?>"
                                class="nav__link"
+                               target="_blank"
                                title="<?= __trans('Voir ma page'); ?>&nbsp;: <?= $social_network_type; ?>"
                                aria-label="<?= __trans('Voir ma page'); ?>&nbsp;: <?= $social_network_type; ?>">
                                 <?= $social_network_link['title']; ?></a>
@@ -60,6 +61,7 @@
                         <li class="footer__nav--item resource--<?= $resource_type; ?>">
                             <a href="<?= $resource_link['url']; ?>"
                                class="nav__link"
+                               target="_blank"
                                title="<?= __trans('Visiter le site de'); ?>&nbsp;: <?= $resource_link['title']; ?>"
                                aria-label="<?= __trans('Visiter le site de'); ?>&nbsp;: <?= $resource_link['title']; ?>">
                                 <?= $resource_link['title']; ?>
