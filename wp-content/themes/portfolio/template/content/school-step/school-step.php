@@ -3,7 +3,7 @@ $title = get_sub_field('main-title');
 $school_steps = get_sub_field('school-step');
 ?>
 <section class="school__steps" data-showUp="true">
-    <h3 class="school__steps--title" role="heading" aria-level="3">
+    <h3 class="school__steps--title">
         <?= $title; ?>
         <span class="last__point">.</span>
     </h3>
@@ -16,7 +16,7 @@ $school_steps = get_sub_field('school-step');
                     <?= $school_step['year']; ?>
                 </time>
                 <div class="single__step--info">
-                    <h4 class="single__step--title" itemprop="alumni" role="heading" aria-level="4">
+                    <h4 class="single__step--title" itemprop="alumni">
                         <?= $school_step['school-name'] ?>
                     </h4>
                     <p class="single__step--orientation">

@@ -6,8 +6,7 @@
     <meta name="description" content="<?= __trans('Portfolio de Lorian Flamant'); ?>">
     <meta name="keywords"
           content="HEPL, Web Developer, Flamant Lorian, Lorian, Flamant, Web, portfolio, web development, SEO, Front-end, back-end, accessibility">
-    <meta name="title" content="Portfolio de Lorian Flamant">
-    <meta name="Auhtor" content="Flamant Lorian">
+    <meta name="Author" content="Flamant Lorian">
     <meta property="og:title" content="Accueil · Portfolio Flamant Lorian">
     <meta property="og:description" content="Portfolio de Lorian Flamant">
     <meta property="og:image:alt" content="Page d'accueil du site de Lorian Flamant">
@@ -25,19 +24,13 @@
     <link rel="manifest" href="<?= get_stylesheet_directory_uri(); ?>/resources/img/favicon/site.webmanifest">
 </head>
 <body itemscope itemtype="https://schema.org/Person">
-<p class="no-js--message">
-    <?= __trans('Pour accéder à toutes les fonctionnalités de ce site, vous devez activer JavaScript.'); ?>
-    <?= __trans('Voici les'); ?>
-    <a href="https://www.enable-javascript.com/fr/"><?= __trans('instructions pour activer JavaScript dans votre navigateur Web') ?>
-        .</a>
-</p>
 <header class="header">
-    <h1 class="sro" role="heading" aria-level="1"><?= __trans('Portfolio de Lorian Flamant'); ?></h1>
-    <nav class="nav__bar" role="navigation" aria-label="main">
-        <a class="skip__link sro" href="#contenu"
+    <h1 class="sro"><?= __trans('Portfolio de Lorian Flamant'); ?></h1>
+    <nav class="nav__bar" aria-label="main">
+        <a class="skip__link" href="#contenu"
            title="<?= __trans('Aller directement au contenu principal de la page'); ?>"
-           aria-label="<?= __trans('Aller directement au contenu principal de la page'); ?>">
-            <?= __trans('Aller vers le contenu de la page'); ?>
+           aria-label="<?= __trans('Aller vers le contenu'); ?>">
+            <?= __trans('Aller vers le contenu'); ?>
         </a>
         <a href="<?= home_url(); ?>"
            class="logo"
@@ -79,6 +72,7 @@
         </a>
         <input type="checkbox" tabindex="0" id="toggle__checkbox" class="bgm--checkbox">
         <label for="toggle__checkbox" class="bgm--label">
+            <span class="sro">Menu de navigation</span>
             <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg"
                  focusable="false">
                 <path d="M2 2H22" stroke-width="3" stroke-linecap="round"/>
@@ -87,7 +81,7 @@
             </svg>
 
         </label>
-        <h2 class="sro" role="heading" aria-level="2"><?= __trans('Navigation principale'); ?></h2>
+        <h2 class="sro"><?= __trans('Navigation principale'); ?></h2>
         <ul class="nav__container">
             <?php foreach (dw_get_navigation_links('header') as $link): ?>
                 <?php

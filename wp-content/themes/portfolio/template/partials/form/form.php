@@ -1,50 +1,51 @@
 <form action="<?= admin_url('admin-post.php'); ?>" method="POST" class="form" novalidate>
     <fieldset>
+        <legend class="sro">Formulaire de contact</legend>
         <div class="field lastname">
-            <label for="last_name" aria-label="<?= __trans('Nom'); ?>"><?= __trans('Nom'); ?><strong class="required">
+            <label for="last_name"><?= __trans('Nom'); ?><strong class="required">
                     *</strong></label>
             <input type="text" name="last_name" id="last_name" placeholder="Dupont" required
                 <?php if (isset($_SESSION['old']['last_name'])): ?>
                     value="<?= $_SESSION['old']['last_name']; ?>"
                 <?php endif; ?>
-                   aria-required="true">
+                   >
             <?php if (isset($_SESSION['errors']['last_name'])): ?>
                 <p class="error"><?= $_SESSION['errors']['last_name']; ?></p>
             <?php endif; ?>
         </div>
 
         <div class="field firstname">
-            <label for="first_name" aria-label="<?= __trans('Prénom'); ?>"><?= __trans('Prénom'); ?><strong
+            <label for="first_name"><?= __trans('Prénom'); ?><strong
                         class="required"> *</strong></label>
             <input type="text" name="first_name" id="first_name" placeholder="Jean" required
                 <?php if (isset($_SESSION['old']['first_name'])): ?>
                     value="<?= $_SESSION['old']['first_name']; ?>"
                 <?php endif; ?>
-                   aria-required="true">
+                   >
             <?php if (isset($_SESSION['errors']['first_name'])): ?>
                 <p class="error"><?= $_SESSION['errors']['first_name']; ?></p>
             <?php endif; ?>
         </div>
 
         <div class="field email">
-            <label for="email" aria-label="<?= __trans('Adresse mail'); ?>"><?= __trans('Adresse mail'); ?><strong
+            <label for="email"><?= __trans('Adresse mail'); ?><strong
                         class="required"> *</strong></label>
             <input type="text" name="email" id="email" placeholder="jean.dupont@gmail.com" required
                 <?php if (isset($_SESSION['old']['email'])): ?>
                     value="<?= $_SESSION['old']['email']; ?>"
                 <?php endif; ?>
-                   aria-required="true">
+                   >
             <?php if (isset($_SESSION['errors']['email'])): ?>
                 <p class="error"><?= $_SESSION['errors']['email']; ?></p>
             <?php endif; ?>
         </div>
 
         <div class="field message">
-            <label for="message" aria-label="<?= __trans('Message'); ?>"><?= __trans('Message'); ?><strong
+            <label for="message"><?= __trans('Message'); ?><strong
                         class="required"> *</strong></label>
             <textarea name="message" id="message" cols="30" rows="10"
                       placeholder="<?= __trans('Je vous contacte pour...'); ?>" required
-                      aria-required="true"><?php if (isset($_SESSION['old']['message'])): ?><?= $_SESSION['old']['message']; ?><?php endif; ?></textarea>
+                      ><?php if (isset($_SESSION['old']['message'])): ?><?= $_SESSION['old']['message']; ?><?php endif; ?></textarea>
             <?php if (isset($_SESSION['errors']['message'])): ?>
                 <p class="error"><?= $_SESSION['errors']['message']; ?></p>
             <?php endif; ?>

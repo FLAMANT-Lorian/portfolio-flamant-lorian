@@ -5,7 +5,7 @@
 <?php include('partials/project/stage.php'); ?>
 
 <section>
-    <h2 class="sro" role="heading" aria-level="2"><?= __trans('L’ensemble de mes projets'); ?></h2>
+    <h2 class="sro"><?= __trans('L’ensemble de mes projets'); ?></h2>
     <?php
     $taxonomy = isset($_GET['filter']) ? sanitize_text_field($_GET['filter']) : '';
     $args = [
@@ -33,7 +33,7 @@
     $current_filter = isset($_GET['filter']) ? sanitize_text_field($_GET['filter']) : '';
     ?>
     <section class="filter__container">
-        <h3 class="sro" role="heading" aria-level="3"><?= __trans('Filtres'); ?></h3>
+        <h3 class="sro"><?= __trans('Filtres'); ?></h3>
         <a href="<?= esc_url(get_permalink()); ?>"
            class="filter <?= ($current_filter === '') ? 'active' : ''; ?>"
            title="<?= __trans('Filtre : tout') ?>"
@@ -51,7 +51,7 @@
         <?php endforeach; ?>
     </section>
     <section class="projects__archive" itemprop="knowsAbout" itemscope="" itemtype="https://schema.org/CreativeWork">
-        <h3 class="sro" role="heading" aria-level="3"><?= __trans('Mes projets'); ?></h3>
+        <h3 class="sro"><?= __trans('Mes projets'); ?></h3>
         <div class="projects__container">
 
             <?php if ($query->have_posts()): while ($query->have_posts()): $query->the_post();
@@ -59,7 +59,7 @@
                 ?>
 
                 <article class="project__card" data-showUp="true">
-                    <h3 class="project__card--title" itemprop="workExample" role="heading" aria-level="3">
+                    <h3 class="project__card--title" itemprop="workExample">
                         <?= get_the_title(); ?>
                     </h3>
                     <?= responsive_image($image, ['loading' => "eager", 'classes' => 'project__card--image']); ?>

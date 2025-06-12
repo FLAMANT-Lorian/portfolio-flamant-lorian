@@ -1,8 +1,8 @@
 </main>
-<footer class="footer" role="contentinfo">
+<footer class="footer">
     <div class="footer__container">
-        <h2 class="sro" role="heading" aria-level="2">Footer</h2>
-        <nav class="footer__nav secondary__nav" role="navigation" aria-label="secondary">
+        <h2 class="sro">Footer</h2>
+        <nav class="footer__nav secondary__nav" aria-label="secondary">
             <h3 class="footer__nav--title secondary__nav--title">
                 <?= __trans('Navigation'); ?>
             </h3>
@@ -19,7 +19,7 @@
             </ul>
         </nav>
         <aside class="footer__nav social__link">
-            <h3 class="footer__nav--title" role="heading" aria-level="3">
+            <h3 class="footer__nav--title">
                 <?= __trans('Retrouvez-moi'); ?>
             </h3>
             <ul class="footer__nav--list">
@@ -46,7 +46,7 @@
             </ul>
         </aside>
         <aside class="footer__nav resources">
-            <h3 class="footer__nav--title" aria-level="3" role="heading">
+            <h3 class="footer__nav--title">
                 <?= __trans('Ressources'); ?>
             </h3>
             <ul class="footer__nav--list ">

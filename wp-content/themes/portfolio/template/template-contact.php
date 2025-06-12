@@ -6,14 +6,14 @@
 the_post(); ?>
 <section class="contact__form">
 
-    <h2 class="contact__form--title" role="heading" aria-level="2">
+    <h2 class="contact__form--title">
         <?= get_field('main-title'); ?>
         <span class="last__point">.</span>
     </h2>
     <div class="contact__form__container">
 
         <article class="contact__left">
-            <h3 class="sro" role="heading" aria-level="3">
+            <h3 class="sro">
                 Informations de contact
             </h3>
             <p class="contact__text">
@@ -21,7 +21,7 @@ the_post(); ?>
             </p>
         </article>
         <section class="contact__right">
-            <h3 class="sro" role="heading" aria-level="3">
+            <h3 class="sro">
                 Formulaire de contact
             </h3>
             <p class="require__message">

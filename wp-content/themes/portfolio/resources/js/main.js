@@ -125,4 +125,3 @@
     }
     projectCard.init();
 })();
-document.documentElement.classList.add('js-enabled');

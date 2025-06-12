@@ -7,7 +7,7 @@ $engagements = get_sub_field('engagement-card');
 
 <section class="commitments" data-showUp="true">
     <div class="info__container">
-        <h3 class="commitments--title" role="heading" aria-level="3">
+        <h3 class="commitments--title">
             <?= $title; ?>
             <span class="last__point">.</span>
         </h3>
@@ -18,7 +18,7 @@ $engagements = get_sub_field('engagement-card');
             <a href="<?= $link['url']; ?>"
                class="arrow__link commitments--link"
                title="<?= __trans('Aller vers la page : Contact'); ?>"
-               aria-label="<?= __trans('Aller vers la page : Contact'); ?>">
+               aria-label="<?= __trans('Me contacter'); ?>">
                 <?= $link['title']; ?>
             </a>
         </div>
@@ -27,7 +27,7 @@ $engagements = get_sub_field('engagement-card');
         <?php if (have_rows('engagement-card')): ?>
             <?php while (have_rows('engagement-card')): the_row(); ?>
                 <article class="simple__commitment">
-                    <h4 class="simple__commitment--title" itemprop="about" role="heading" aria-level="4">
+                    <h4 class="simple__commitment--title" itemprop="about">
                         <?= get_sub_field('engagement-name'); ?>
                     </h4>
                     <p class="simple__commitment--text" itemprop="abstract">

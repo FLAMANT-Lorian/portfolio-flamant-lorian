@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2025-06-07 17:22+0200\n"
-"PO-Revision-Date: 2025-06-07 17:22+0200\n"
+"POT-Creation-Date: 2025-06-12 10:19+0200\n"
+"PO-Revision-Date: 2025-06-12 10:19+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_BE\n"
@@ -22,11 +22,11 @@ msgstr "Page non trouvée"
 msgid "Il n’y a rien à voir par ici"
 msgstr "Il n’y a rien à voir par ici"
 
-#: 404.php:17 404.php:18
+#: 404.php:17
 msgid "Retourner à la page d'acceuil"
 msgstr "Retourner à la page d’accueil"
 
-#: 404.php:19
+#: 404.php:18 404.php:19
 msgid "Retourner à l’accueil"
 msgstr "Retourner à l’accueil"
 
@@ -34,7 +34,7 @@ msgstr "Retourner à l’accueil"
 msgid "Navigation"
 msgstr "Navigation"
 
-#: footer.php:13 footer.php:14 header.php:101 header.php:102
+#: footer.php:13 footer.php:14 header.php:95 header.php:96
 msgid "Aller sur la page : "
 msgstr "Aller sur la page : "
 
@@ -42,23 +42,23 @@ msgstr "Aller sur la page : "
 msgid "Retrouvez-moi"
 msgstr "Retrouvez-moi"
 
-#: footer.php:36 footer.php:37
+#: footer.php:37 footer.php:38
 msgid "Voir ma page"
 msgstr "Voir ma page"
 
-#: footer.php:49
+#: footer.php:50
 msgid "Ressources"
 msgstr "Ressources"
 
-#: footer.php:63 footer.php:64
+#: footer.php:65 footer.php:66
 msgid "Visiter le site de"
 msgstr "Visiter le site de"
 
-#: footer.php:83
+#: footer.php:85
 msgid "©2025 FLAMANT LORIAN. Tous droits réservés"
 msgstr "©2025 FLAMANT LORIAN. Tous droits réservés"
 
-#: footer.php:92 template/template-legal.php:7
+#: footer.php:94 template/template-legal.php:7
 msgid "Mentions légales"
 msgstr "Mentions légales"
 
@@ -75,47 +75,35 @@ msgstr "Découvrir le projet "
 msgid "Découvrir le projet"
 msgstr "Découvrir le projet"
 
-#: front-page.php:38 front-page.php:39
+#: front-page.php:38
 msgid "Aller sur la page : Mes projets"
 msgstr "Aller sur la page : Mes projets"
+
+#: front-page.php:39 template/partials/about/stage.php:15
+msgid "Découvrir mes projets"
+msgstr "Découvrir mes projets"
 
 #: header.php:2
 msgid "fr"
 msgstr "fr"
 
-#: header.php:6 header.php:35
+#: header.php:6 header.php:28
 msgid "Portfolio de Lorian Flamant"
 msgstr "Portfolio de Lorian Flamant"
 
-#: header.php:29
-msgid ""
-"Pour accéder à toutes les fonctionnalités de ce site, vous devez activer "
-"JavaScript."
-msgstr ""
-"Pour accéder à toutes les fonctionnalités de ce site, vous devez activer "
-"JavaScript."
-
-#: header.php:30
-msgid "Voici les"
-msgstr "Voici les"
-
 #: header.php:31
-msgid "instructions pour activer JavaScript dans votre navigateur Web"
-msgstr "instructions pour activer JavaScript dans votre navigateur Web"
-
-#: header.php:38 header.php:39
 msgid "Aller directement au contenu principal de la page"
 msgstr "Aller directement au contenu principal de la page"
 
-#: header.php:40
-msgid "Aller vers le contenu de la page"
-msgstr "Aller vers le contenu de la page"
+#: header.php:32 header.php:33
+msgid "Aller vers le contenu"
+msgstr "Aller vers le contenu"
 
-#: header.php:44 header.php:45
+#: header.php:37 header.php:38
 msgid "Retourner à la page d’accueil"
 msgstr "Retourner à la page d’accueil"
 
-#: header.php:90
+#: header.php:84
 msgid "Navigation principale"
 msgstr "Navigation principale"
 
@@ -124,46 +112,53 @@ msgid "Découvrir d’autres projets"
 msgstr "Découvrir d’autres projets"
 
 #: template/content/engagement/engagement.php:20
-#: template/content/engagement/engagement.php:21
 msgid "Aller vers la page : Contact"
 msgstr "Aller vers la page : Contact"
+
+#: template/content/engagement/engagement.php:21
+msgid "Me contacter"
+msgstr "Me contacter"
 
 #: template/content/text-media/text-media-about.php:10
 msgid "Description de moi"
 msgstr "Description de moi"
 
-#: template/partials/about/stage.php:14 template/partials/about/stage.php:15
+#: template/partials/about/stage.php:14
 #: template/partials/single-project/stage.php:6
 msgid "Aller vers la page : Projets"
 msgstr "Aller vers la page : Projets"
 
-#: template/partials/form/form.php:4
+#: template/partials/form/form.php:5
 msgid "Nom"
 msgstr "Nom"
 
-#: template/partials/form/form.php:17
+#: template/partials/form/form.php:18
 msgid "Prénom"
 msgstr "Prénom"
 
-#: template/partials/form/form.php:30
+#: template/partials/form/form.php:31
 msgid "Adresse mail"
 msgstr "Adresse mail"
 
-#: template/partials/form/form.php:43
+#: template/partials/form/form.php:44
 msgid "Message"
 msgstr "Message"
 
-#: template/partials/form/form.php:46
+#: template/partials/form/form.php:47
 msgid "Je vous contacte pour..."
 msgstr "Je vous contacte pour…"
 
-#: template/partials/form/form.php:55 template/partials/form/form.php:56
+#: template/partials/form/form.php:56 template/partials/form/form.php:57
 msgid "Envoyer"
 msgstr "Envoyer"
 
-#: template/partials/home/stage.php:18 template/partials/home/stage.php:19
+#: template/partials/home/stage.php:18
 msgid "Aller sur la page : À propos"
 msgstr "Aller sur la page : À propos"
+
+#: template/partials/home/stage.php:19
+msgid "Me découvrir"
+msgstr "Me découvrir"
 
 #: template/partials/single-project/stage.php:17
 msgid "Voir le projet"
@@ -204,6 +199,15 @@ msgstr "Mes projets"
 #: template/template-projects.php:78
 msgid "Revenez bientôt pour découvrir d’autres projets"
 msgstr "Revenez bientôt pour découvrir d’autres projets"
+
+#~ msgid "Pour accéder à toutes les fonctionnalités de ce site, vous devez activer JavaScript."
+#~ msgstr "Pour accéder à toutes les fonctionnalités de ce site, vous devez activer JavaScript."
+
+#~ msgid "Voici les"
+#~ msgstr "Voici les"
+
+#~ msgid "instructions pour activer JavaScript dans votre navigateur Web"
+#~ msgstr "instructions pour activer JavaScript dans votre navigateur Web"
 
 #~ msgid "Aller vers la page : Mentions légales"
 #~ msgstr "Aller vers la page : Mentions légales"
