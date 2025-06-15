@@ -4,8 +4,7 @@ $school_steps = get_sub_field('school-step');
 ?>
 <section class="school__steps" data-showUp="true">
     <h3 class="school__steps--title">
-        <?= $title; ?>
-        <span class="last__point">.</span>
+        <?= $title; ?><span class="last__point">.</span>
     </h3>
     <div class="school__steps__container" itemprop="alumniOf" itemscope
          itemtype="https://schema.org/EducationalOrganization">

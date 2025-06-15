@@ -58,42 +58,24 @@ h2 {
   font-size: 3.75rem;
   font-weight: 900;
   line-height: 3.4375rem;
-  letter-spacing: -0.006em;
-  max-width: 1069px;
-
-
-  .last__point {
-    margin-left: -10px;
-  }
+  letter-spacing: -0.03em;
+  max-width: 66.8125rem;
 
   @media (min-width: $tablet) {
     font-size: 6.25rem;
     line-height: 5.625rem;
-
-
-    .last__point {
-      margin-left: -1.25rem;
-    }
   }
 
   @media (min-width: $semi-desktop) {
     font-size: 10rem;
-    line-height: 12.375rem;
+    line-height: 10rem;
     letter-spacing: -0.025em;
-
-    .last__point {
-      margin-left: -1.5625rem;
-    }
   }
 
   @media (min-width: $desktop) {
     font-size: 13.75rem;
     line-height: 12.375rem;
-    letter-spacing: -0.025em;
-
-    .last__point {
-      margin-left: -1.875rem;
-    }
+    letter-spacing: -0.04em;
   }
 }
 
@@ -102,18 +84,10 @@ h3, label {
   font-weight: 700;
   line-height: 2rem;
 
-  .last__point {
-    margin-left: -0.375rem;
-  }
-
   @media (min-width: $desktop) {
     font-size: 2.5rem;
     line-height: 2.8125rem;
     letter-spacing: .008em;
-
-    .last__point {
-      margin-left: -0.5rem;
-    }
   }
 }
 
@@ -158,6 +132,7 @@ a {
 
 .arrow__link {
   display: inline-flex;
+  align-items: center;
   color: $red;
   font-size: 1.25rem;
   line-height: 1.25rem;
@@ -186,7 +161,7 @@ a {
     display: inline-block;
     width: 15px;
     height: 15px;
-    margin-left: 16px;
+    margin-left: 1rem;
   }
 
   &:hover:after, &:active:after {

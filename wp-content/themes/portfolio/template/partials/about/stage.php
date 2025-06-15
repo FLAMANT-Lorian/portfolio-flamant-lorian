@@ -5,8 +5,7 @@ $stage = get_field('stage');
 <?php if (have_rows('stage')): while (have_rows('stage')):the_row(); ?>
     <section class="about">
         <h2 class="about--title">
-            <?= $stage['main-title']; ?>
-            <span class="last__point">.</span>
+            <?= $stage['main-title']; ?><span class="last__point">.</span>
         </h2>
         <div class="btn__container">
             <a href="<?= $stage['link']['url']; ?>"

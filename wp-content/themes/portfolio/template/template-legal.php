@@ -4,8 +4,7 @@
 
     <section class="privacy">
         <h2 class="privacy--title">
-            <?= __trans('Mentions légales'); ?>
-            <span class="last__point">.</span>
+            <?= __trans('Mentions légales'); ?><span class="last__point">.</span>
         </h2>
         <p class="privacy--date">
             <time datetime="<?= get_the_modified_date('d-m-Y'); ?>">

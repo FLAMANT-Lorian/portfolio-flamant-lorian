@@ -8,8 +8,7 @@
             </a>
         </div>
         <h2 class="single__stage--title" itemprop="name">
-            <?= get_sub_field('main-title'); ?>
-            <span class="last__point">.</span>
+            <?= get_sub_field('main-title'); ?><span class="last__point">.</span>
         </h2>
         <div class="btn__container">
             <a href="<?= get_sub_field('site-link')['url']; ?>"

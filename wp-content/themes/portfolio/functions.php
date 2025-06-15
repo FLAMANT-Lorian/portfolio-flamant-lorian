@@ -60,10 +60,10 @@ register_post_type('project', [
 register_post_type('contact_message', [
     'label' => 'Messages',
     'description' => 'Messages lié au formulaire de contact',
-    'menu_position' => 10, /*Position dans l'admin wordpress => Voir les position sur internet*/
+    'menu_position' => 10,
     'menu_icon' => 'dashicons-email',
     'public' => false,
-    'has_archive' => false, // Pour faire apparaitre les menus recettes et voyages dans les screen options de WordPress
+    'has_archive' => false,
     'supports' => [
         'title', 'editor',
     ],
@@ -75,7 +75,7 @@ register_post_type('contact_message', [
 register_nav_menu('header', 'Le menu de navigation principale');
 register_nav_menu('footer', 'Le menu de navigation secondaire');
 
-function dw_get_navigation_links(string $location): array
+function get_navigation_links(string $location): array
 {
     // 1°  Récupérer l'objet WordPress pour le menu à la location $location
     $locations = get_nav_menu_locations();
@@ -140,8 +140,6 @@ function create_site_options_page()
             'page_title' => 'Site Options',
             'menu_title' => 'Site Settings',
             'menu_slug' => 'site-options',
-            'capability' => 'edit_posts',
-            'redirect' => false
         ]);
     }
 }

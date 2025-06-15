@@ -7,7 +7,7 @@
                 <?= __trans('Navigation'); ?>
             </h3>
             <ul class="footer__nav--list secondary__nav--list">
-                <?php foreach (dw_get_navigation_links('footer') as $link): ?>
+                <?php foreach (get_navigation_links('footer') as $link): ?>
                     <li class="secondary__nav--item">
                         <a href="<?= $link->href; ?>" class="nav__link"
                            title="<?= __trans('Aller sur la page : ') ?><?= $link->label ?>"

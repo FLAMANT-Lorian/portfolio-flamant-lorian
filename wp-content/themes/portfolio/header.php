@@ -79,11 +79,10 @@
                 <path d="M5 11H19" stroke-width="3" stroke-linecap="round"/>
                 <path d="M2 20H22" stroke-width="3" stroke-linecap="round"/>
             </svg>
-
         </label>
         <h2 class="sro"><?= __trans('Navigation principale'); ?></h2>
         <ul class="nav__container">
-            <?php foreach (dw_get_navigation_links('header') as $link): ?>
+            <?php foreach (get_navigation_links('header') as $link): ?>
                 <?php
                 $current_url = rtrim(wp_get_canonical_url(), '/');
                 $link_url = rtrim($link->href, '/');

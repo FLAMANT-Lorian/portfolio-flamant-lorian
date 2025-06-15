@@ -11,8 +11,7 @@ endif;
 
     <section class="others__projects">
         <h2 class="others__projects--title">
-            <?= __trans('Découvrir d’autres projets'); ?>
-            <span class="last__point">.</span>
+            <?= __trans('Découvrir d’autres projets'); ?><span class="last__point">.</span>
         </h2>
         <div class="projects__container" itemprop="knowsAbout" itemscope="" itemtype="https://schema.org/CreativeWork">
             <?php $projects = new WP_Query([

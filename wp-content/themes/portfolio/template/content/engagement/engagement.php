@@ -8,8 +8,7 @@ $engagements = get_sub_field('engagement-card');
 <section class="commitments" data-showUp="true">
     <div class="info__container">
         <h3 class="commitments--title">
-            <?= $title; ?>
-            <span class="last__point">.</span>
+            <?= $title; ?><span class="last__point">.</span>
         </h3>
         <p class="commitments--text">
             <?= $description; ?>
