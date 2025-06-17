@@ -15,7 +15,7 @@
     }
   }
 
-  &--wrapper{
+  &--wrapper {
     margin: auto;
     max-width: 1250px;
     overflow-x: hidden;
@@ -51,6 +51,26 @@
     max-width: 5rem;
     height: auto;
   }
+}
+
+.language__single--name {
+  text-transform: uppercase;
+  transform: translateY(-20px);
+  opacity: 0;
+  transition: all ease-in-out .2s;
+}
+
+.language__single:hover .language__single--name,
+.language__single:active .language__single--name {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.language__single--link {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
 }
 
 @keyframes scrollMobile {

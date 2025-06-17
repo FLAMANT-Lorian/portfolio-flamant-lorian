@@ -212,14 +212,14 @@ function responsive_image($image, array $settings)
 
     ob_start(); ?>
 
-    <picture class="picture--container">
+    <figure class="picture--container">
         <img src="<?= esc_url($src) ?>"
              alt="<?= esc_attr($alt) ?>"
              loading="<?= esc_attr($lazy) ?>"
              srcset="<?= esc_attr($srcset) ?>"
              sizes="<?= esc_attr($sizes) ?>"
              class="<?= esc_attr($classes); ?>">
-    </picture>
+    </figure>
 
     <?php
     return ob_get_clean();

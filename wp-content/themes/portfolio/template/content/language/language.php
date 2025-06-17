@@ -9,11 +9,22 @@ $logos = get_sub_field('languages-logo');
     </h3>
     <div class="language--wrapper">
         <div class="language--gallery">
-            <?php for ($i = 0; $i < 2; $i++): ?>
+            <?php for ($i = 0;
+                       $i < 2;
+                       $i++): ?>
 
-                <?php foreach ($logos as $logo): ?>
-                    <?= responsive_image($logo, ['loading' => 'lazy', 'classes' => 'single__language--image']) ?>
-                <?php endforeach; endfor; ?>
+                <?php foreach ($logos as $logo):?>
+                    <div class="language__single">
+                        <a href="<?= $logo['caption']; ?>"
+                           class="language__single--link"
+                        title="Vers la page de <?= $logo['title']; ?>"
+                        aria-label="<?= $logo['title']; ?>">
+                            <?= responsive_image($logo, ['loading' => 'lazy', 'classes' => 'single__language--image']) ?>
+                            <span class="language__single--name"><?= $logo['title']; ?></span>
+                        </a>
+                    </div>
+                <?php endforeach;
+            endfor; ?>
         </div>
     </div>
 </section>

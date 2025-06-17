@@ -52,14 +52,12 @@
   }
 
   @media (min-width: $desktop) {
-    justify-content: end;
     margin-bottom: 6rem;
   }
 
   .filter {
-    border: 1px solid $grey;
     color: $grey;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 700;
     letter-spacing: 0.003em;
     text-align: center;
@@ -70,7 +68,6 @@
     &.active, &:hover {
       background-color: $red;
       color: $white;
-      border: 1px solid $red;
     }
   }
 }

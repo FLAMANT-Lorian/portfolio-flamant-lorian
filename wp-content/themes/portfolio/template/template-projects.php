@@ -32,25 +32,29 @@
 
     $current_filter = isset($_GET['filter']) ? sanitize_text_field($_GET['filter']) : '';
     ?>
-    <section class="filter__container">
-        <h3 class="sro"><?= __trans('Filtres'); ?></h3>
-        <a href="<?= esc_url(get_permalink()); ?>"
-           class="filter <?= ($current_filter === '') ? 'active' : ''; ?>"
-           title="<?= __trans('Filtre : tout') ?>"
-           aria-label="<?= __trans('Tout') ?>">
-            <?= __trans('Tout') ?>
-        </a>
+    <ul class="filter__container">
+        <li>
+            <a href="<?= esc_url(get_permalink()) . '#content' ?>"
+               class="filter <?= ($current_filter === '') ? 'active' : ''; ?>"
+               title="<?= __trans('Filtre : tout') ?>"
+               aria-label="<?= __trans('Tout') ?>">
+                <?= __trans('Tout') ?>
+            </a>
+        </li>
 
         <?php foreach ($terms as $term): ?>
-            <a href="<?= esc_url(get_permalink()) . '?filter=' . $term->slug; ?>"
-               class="filter <?= ($current_filter === $term->slug) ? 'active' : ''; ?>"
-               title="<?= $term->name ?>"
-               aria-label="<?= $term->name ?>">
-                <?= esc_html($term->name); ?>
-            </a>
+            <li>
+                <a href="<?= esc_url(get_permalink()) . '?filter=' . $term->slug . '#content' ?>"
+                   class="filter <?= ($current_filter === $term->slug) ? 'active' : ''; ?>"
+                   title="<?= $term->name ?>"
+                   aria-label="<?= $term->name ?>">
+                    <?= esc_html($term->name); ?>
+                </a>
+            </li>
         <?php endforeach; ?>
-    </section>
-    <section class="projects__archive" itemprop="knowsAbout" itemscope="" itemtype="https://schema.org/CreativeWork">
+    </ul>
+    <section class="projects__archive" itemprop="knowsAbout" itemscope="" itemtype="https://schema.org/CreativeWork"
+             id="content">
         <h3 class="sro"><?= __trans('Mes projets'); ?></h3>
         <div class="projects__container">
 
