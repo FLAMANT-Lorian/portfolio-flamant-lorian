@@ -16,6 +16,7 @@ $logos = get_sub_field('languages-logo');
                 <?php foreach ($logos as $logo):?>
                     <div class="language__single">
                         <a href="<?= $logo['caption']; ?>"
+                           target="_blank"
                            class="language__single--link"
                         title="Vers la page de <?= $logo['title']; ?>"
                         aria-label="<?= $logo['title']; ?>">
