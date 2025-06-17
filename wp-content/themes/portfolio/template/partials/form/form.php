@@ -4,9 +4,9 @@
         <div class="field lastname">
             <label for="last_name"><?= __trans('Nom'); ?><strong class="required">
                     *</strong></label>
-            <input type="text" name="last_name" id="last_name" placeholder="Dupont" required
+            <input type="text" name="last_name" id="last_name" placeholder="Dupont"
                 <?php if (isset($_SESSION['old']['last_name'])): ?>
-                    value="<?= $_SESSION['old']['last_name']; ?>"
+                    value="<?= esc_html($_SESSION['old']['last_name']); ?>"
                 <?php endif; ?>
                    >
             <?php if (isset($_SESSION['errors']['last_name'])): ?>
@@ -17,9 +17,9 @@
         <div class="field firstname">
             <label for="first_name"><?= __trans('Prénom'); ?><strong
                         class="required"> *</strong></label>
-            <input type="text" name="first_name" id="first_name" placeholder="Jean" required
+            <input type="text" name="first_name" id="first_name" placeholder="Jean"
                 <?php if (isset($_SESSION['old']['first_name'])): ?>
-                    value="<?= $_SESSION['old']['first_name']; ?>"
+                    value="<?= esc_html($_SESSION['old']['first_name']); ?>"
                 <?php endif; ?>
                    >
             <?php if (isset($_SESSION['errors']['first_name'])): ?>
@@ -30,9 +30,9 @@
         <div class="field email">
             <label for="email"><?= __trans('Adresse mail'); ?><strong
                         class="required"> *</strong></label>
-            <input type="text" name="email" id="email" placeholder="jean.dupont@gmail.com" required
+            <input type="text" name="email" id="email" placeholder="jean.dupont@gmail.com"
                 <?php if (isset($_SESSION['old']['email'])): ?>
-                    value="<?= $_SESSION['old']['email']; ?>"
+                    value="<?= esc_html($_SESSION['old']['email']); ?>"
                 <?php endif; ?>
                    >
             <?php if (isset($_SESSION['errors']['email'])): ?>
@@ -44,8 +44,8 @@
             <label for="message"><?= __trans('Message'); ?><strong
                         class="required"> *</strong></label>
             <textarea name="message" id="message" cols="30" rows="10"
-                      placeholder="<?= __trans('Je vous contacte pour...'); ?>" required
-                      ><?php if (isset($_SESSION['old']['message'])): ?><?= $_SESSION['old']['message']; ?><?php endif; ?></textarea>
+                      placeholder="<?= __trans('Je vous contacte pour...'); ?>"
+                      ><?php if (isset($_SESSION['old']['message'])): ?><?= esc_html($_SESSION['old']['message']); ?><?php endif; ?></textarea>
             <?php if (isset($_SESSION['errors']['message'])): ?>
                 <p class="error"><?= $_SESSION['errors']['message']; ?></p>
             <?php endif; ?>

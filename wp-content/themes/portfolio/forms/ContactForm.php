@@ -4,7 +4,6 @@ namespace Portfolio\Forms;
 
 class ContactForm
 {
-
     public static function handle(array $data): void
     {
         wp_insert_post([
@@ -48,7 +47,7 @@ class ContactForm
         return true;
     }
 
-    public static function email($field_name): bool
+    public static function email(string $field_name): bool
     {
         if (
             array_key_exists($field_name, $_REQUEST) &&
